@@ -72,6 +72,13 @@ export default {
 					ink: 'hsl(var(--loom-ink))',
 					mist: 'hsl(var(--loom-mist))'
 				},
+				/* Path element colors */
+				path: {
+					green: 'hsl(var(--path-green))',
+					sage: 'hsl(var(--path-sage))',
+					sand: 'hsl(var(--path-sand))',
+					horizon: 'hsl(var(--path-horizon))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -91,7 +98,10 @@ export default {
 				'gradient-spark-bg': 'var(--gradient-spark-bg)',
 				'gradient-loom': 'var(--gradient-loom)',
 				'gradient-loom-bg': 'var(--gradient-loom-bg)',
-				'gradient-loom-flow': 'var(--gradient-loom-flow)'
+				'gradient-loom-flow': 'var(--gradient-loom-flow)',
+				'gradient-path': 'var(--gradient-path)',
+				'gradient-path-bg': 'var(--gradient-path-bg)',
+				'gradient-path-horizon': 'var(--gradient-path-horizon)'
 			},
 			boxShadow: {
 				'sanctuary': 'var(--shadow-sanctuary)',
@@ -207,6 +217,40 @@ export default {
 						transform: 'translateY(0)',
 						opacity: '1'
 					}
+				},
+				/* Path growing animations */
+				'horizon-drift': {
+					'0%': {
+						transform: 'translateX(-50px)',
+						opacity: '0.3'
+					},
+					'50%': {
+						opacity: '0.7'
+					},
+					'100%': {
+						transform: 'translateX(50px)',
+						opacity: '0.3'
+					}
+				},
+				'grow-gentle': {
+					'0%': {
+						transform: 'scale(0.98)',
+						opacity: '0.5'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'path-emerge': {
+					'0%': {
+						strokeDashoffset: '100',
+						opacity: '0'
+					},
+					'100%': {
+						strokeDashoffset: '0',
+						opacity: '0.6'
+					}
 				}
 			},
 			animation: {
@@ -219,7 +263,10 @@ export default {
 				'lightning-flicker': 'lightning-flicker 4s ease-in-out infinite',
 				'flow-gentle': 'flow-gentle 8s ease-in-out infinite',
 				'breathe': 'breathe 4s ease-in-out infinite',
-				'settle': 'settle 0.8s ease-out'
+				'settle': 'settle 0.8s ease-out',
+				'horizon-drift': 'horizon-drift 12s ease-in-out infinite',
+				'grow-gentle': 'grow-gentle 1s ease-out',
+				'path-emerge': 'path-emerge 3s ease-out'
 			}
 		}
 	},

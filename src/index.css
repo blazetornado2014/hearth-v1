@@ -54,6 +54,12 @@ All colors MUST be HSL.
     --loom-ink: 225 20% 45%; /* ink-toned neutral */
     --loom-mist: 220 15% 90%; /* soft mist background */
     
+    /* Path element - growing and guidance */
+    --path-green: 150 25% 65%; /* natural green */
+    --path-sage: 160 15% 70%; /* misty sage */
+    --path-sand: 45 20% 80%; /* sand-colored */
+    --path-horizon: 200 20% 85%; /* misty blue horizon */
+    
     /* Gradients for magical feel */
     --gradient-sanctuary: linear-gradient(135deg, hsl(var(--sanctuary-glow)), hsl(var(--primary)));
     --gradient-twilight: linear-gradient(180deg, hsl(var(--background)), hsl(var(--sanctuary-twilight) / 0.1));
@@ -67,6 +73,11 @@ All colors MUST be HSL.
     --gradient-loom: linear-gradient(135deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
     --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-mist)), hsl(var(--background)));
     --gradient-loom-flow: linear-gradient(90deg, hsl(var(--loom-blue) / 0.3), hsl(var(--loom-lavender) / 0.3));
+    
+    /* Path gradients - growing and guidance */
+    --gradient-path: linear-gradient(135deg, hsl(var(--path-green)), hsl(var(--path-sage)));
+    --gradient-path-bg: linear-gradient(180deg, hsl(var(--path-horizon)), hsl(var(--background)));
+    --gradient-path-horizon: linear-gradient(90deg, hsl(var(--path-sand) / 0.4), hsl(var(--path-green) / 0.3));
     
     /* Shadows with warm tones */
     --shadow-sanctuary: 0 20px 40px -12px hsl(var(--primary) / 0.25);
