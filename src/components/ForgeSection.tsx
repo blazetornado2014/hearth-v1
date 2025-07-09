@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const ForgeSection = () => {
   return (
-    <section className="relative py-20 bg-forge-charcoal overflow-hidden">
+    <section className="relative py-20 bg-forge-bg overflow-hidden">
       {/* Molten forge atmosphere */}
       <div className="absolute inset-0 opacity-70">
         <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-gradient-radial from-forge-copper/40 to-transparent rounded-full blur-2xl animate-radiant-glow"></div>

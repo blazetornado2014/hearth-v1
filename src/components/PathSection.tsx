@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button";
 
 const PathSection = () => {
   return (
-    <section className="relative py-20 bg-white overflow-hidden">
+    <section className="relative py-20 bg-path-bg overflow-hidden">
       {/* Clean natural atmosphere */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-radial from-path-green/20 to-transparent rounded-full blur-3xl animate-grow-gentle"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-path-sage/15 to-transparent rounded-full blur-2xl animate-horizon-drift"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-radial from-path-emerald/20 to-transparent rounded-full blur-3xl animate-grow-gentle"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-path-mint/15 to-transparent rounded-full blur-2xl animate-horizon-drift"></div>
         
         {/* Natural growth elements */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-path-green rounded-full animate-grow-gentle shadow-sm shadow-path-green/30"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-path-sage rounded-full animate-horizon-drift delay-500"></div>
-        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-path-green/80 rounded-full animate-grow-gentle delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-path-emerald rounded-full animate-grow-gentle shadow-sm shadow-path-emerald/30"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-path-mint rounded-full animate-horizon-drift delay-500"></div>
+        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-path-emerald/80 rounded-full animate-grow-gentle delay-1000"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -69,7 +69,7 @@ const PathSection = () => {
           {/* Content - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              <span className="text-path-green/80">Meet</span>
+              <span className="text-path-emerald/80">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-path font-medium text-6xl md:text-7xl">
                 Path
               </span>

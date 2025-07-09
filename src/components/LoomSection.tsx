@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const LoomSection = () => {
   return (
-    <section className="relative py-20 bg-gradient-loom-bg overflow-hidden">
-      {/* Simplified mist atmosphere */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-loom-blue/6 to-transparent rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-radial from-loom-lavender/4 to-transparent rounded-full blur-xl animate-pulse delay-1000"></div>
+    <section className="relative py-20 bg-loom-bg overflow-hidden">
+      {/* Deep purple mystical atmosphere */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-loom-royal/15 to-transparent rounded-full blur-2xl animate-breathe"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-radial from-loom-accent/10 to-transparent rounded-full blur-xl animate-breathe delay-1000"></div>
         
-        {/* Subtle ink drops */}
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-loom-blue/40 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 bg-loom-lavender/30 rounded-full animate-pulse delay-500"></div>
+        {/* Mystical purple drops */}
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-loom-royal rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 bg-loom-accent rounded-full animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -64,37 +64,37 @@ const LoomSection = () => {
 
           {/* Content - Right */}
           <div className="text-left max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              <span className="text-muted-foreground">Meet</span>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+              <span className="text-white/60">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-loom font-medium">
                 Loom
               </span>
-              <span className="block text-muted-foreground">Your Emotional Weaver</span>
+              <span className="block text-white/90">Your Emotional Weaver</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed font-light mb-8">
+            <p className="text-lg text-white/80 leading-relaxed font-light mb-8">
               After Spark illuminates, Loom helps you process. This companion creates space for your emotions 
               to unfold naturally — no rushing, no fixing, just gentle witnessing. 
               Like threads settling into patterns, your feelings find their place here.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground">
+              <div className="flex items-center gap-3 text-white">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium">Emotional Processing</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
+              <div className="flex items-center gap-3 text-white">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse delay-300"></div>
                 <span className="text-sm font-medium">Patient Witnessing</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
+              <div className="flex items-center gap-3 text-white">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse delay-600"></div>
                 <span className="text-sm font-medium">Natural Unfolding</span>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground/80 italic">
+            <div className="pt-6 border-t border-loom-accent/30">
+              <p className="text-sm text-loom-accent italic font-medium">
                 "Like threads in a loom, emotions weave into understanding"
               </p>
             </div>

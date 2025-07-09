@@ -37,41 +37,42 @@ All colors MUST be HSL.
     --input: 0 0% 96%;
     --ring: 25 80% 55%;
 
-    /* Spark Element - Electric purple/blue */
-    --spark-electric: 260 85% 65%; 
-    --spark-violet: 280 70% 70%;
-    --spark-twilight: 250 30% 20%;
+    /* Spark Element - Electric yellow/gold */
+    --spark-electric: 45 100% 50%; /* bright yellow */
+    --spark-gold: 38 100% 60%; /* golden yellow */
+    --spark-bright: 50 100% 70%; /* light yellow */
+    --spark-bg: 0 0% 100%; /* white background */
     
-    /* Loom Element - Flowing blue/lavender */
-    --loom-blue: 215 85% 60%;
-    --loom-lavender: 260 40% 75%;
-    --loom-ink: 220 30% 30%;
-    --loom-mist: 210 20% 85%;
+    /* Loom Element - Deep purple/midnight */
+    --loom-deep: 250 60% 25%; /* deep purple */
+    --loom-royal: 260 80% 35%; /* royal purple */
+    --loom-accent: 270 70% 50%; /* purple accent */
+    --loom-bg: 250 40% 15%; /* dark purple background */
     
-    /* Path Element - Natural green/sage */
-    --path-green: 140 50% 50%;
-    --path-sage: 120 25% 60%;
-    --path-sand: 45 35% 80%;
-    --path-horizon: 160 20% 75%;
+    /* Path Element - Fresh green/nature */
+    --path-emerald: 140 70% 45%; /* emerald green */
+    --path-forest: 120 60% 35%; /* forest green */
+    --path-mint: 150 50% 60%; /* mint accent */
+    --path-bg: 0 0% 100%; /* white background */
     
-    /* Forge Element - Earthy copper/charcoal */
-    --forge-copper: 15 70% 60%;
-    --forge-earth: 25 35% 45%;
-    --forge-charcoal: 220 15% 25%;
-    --forge-stone: 30 15% 70%;
+    /* Forge Element - Bold orange/charcoal */
+    --forge-flame: 25 100% 55%; /* bright orange */
+    --forge-ember: 15 90% 50%; /* deep orange */
+    --forge-accent: 35 80% 60%; /* warm orange */
+    --forge-bg: 220 30% 10%; /* deep charcoal background */
 
     /* Element Gradients */
-    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-violet)));
-    --gradient-spark-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--spark-twilight) / 0.03));
+    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-gold)));
+    --gradient-spark-bg: linear-gradient(180deg, hsl(var(--spark-bg)), hsl(var(--spark-bright) / 0.1));
     
-    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
-    --gradient-loom-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--loom-mist) / 0.3));
+    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-deep)), hsl(var(--loom-royal)));
+    --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-bg)), hsl(var(--loom-accent) / 0.2));
     
-    --gradient-path: linear-gradient(135deg, hsl(var(--path-green)), hsl(var(--path-sage)));
-    --gradient-path-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--path-horizon) / 0.2));
+    --gradient-path: linear-gradient(135deg, hsl(var(--path-emerald)), hsl(var(--path-forest)));
+    --gradient-path-bg: linear-gradient(180deg, hsl(var(--path-bg)), hsl(var(--path-mint) / 0.1));
     
-    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-copper)), hsl(var(--forge-earth)));
-    --gradient-forge-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--forge-stone) / 0.4));
+    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-flame)), hsl(var(--forge-ember)));
+    --gradient-forge-bg: linear-gradient(180deg, hsl(var(--forge-bg)), hsl(var(--forge-accent) / 0.2));
     
     /* Clean shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
@@ -136,37 +137,38 @@ All colors MUST be HSL.
     --ring: 25 85% 65%;
 
     /* Dark mode element colors */
-    --spark-electric: 260 90% 75%; 
-    --spark-violet: 280 75% 80%;
-    --spark-twilight: 250 35% 15%;
+    --spark-electric: 45 90% 60%; /* bright yellow for dark mode */
+    --spark-gold: 38 85% 65%; /* golden yellow for dark mode */
+    --spark-bright: 50 80% 75%; /* light yellow for dark mode */
+    --spark-bg: 0 0% 8%; /* dark background for spark in dark mode */
     
-    --loom-blue: 215 85% 70%;
-    --loom-lavender: 260 45% 80%;
-    --loom-ink: 220 40% 20%;
-    --loom-mist: 210 25% 80%;
+    --loom-deep: 250 70% 35%; /* deep purple for dark mode */
+    --loom-royal: 260 85% 45%; /* royal purple for dark mode */
+    --loom-accent: 270 75% 60%; /* purple accent for dark mode */
+    --loom-bg: 250 50% 8%; /* dark purple background for dark mode */
     
-    --path-green: 140 55% 60%;
-    --path-sage: 120 30% 70%;
-    --path-sand: 45 40% 75%;
-    --path-horizon: 160 25% 70%;
+    --path-emerald: 140 75% 55%; /* emerald green for dark mode */
+    --path-forest: 120 65% 45%; /* forest green for dark mode */
+    --path-mint: 150 55% 70%; /* mint accent for dark mode */
+    --path-bg: 0 0% 8%; /* dark background for path in dark mode */
     
-    --forge-copper: 15 75% 70%;
-    --forge-earth: 25 40% 50%;
-    --forge-charcoal: 220 20% 20%;
-    --forge-stone: 30 20% 65%;
+    --forge-flame: 25 95% 65%; /* bright orange for dark mode */
+    --forge-ember: 15 85% 60%; /* deep orange for dark mode */
+    --forge-accent: 35 75% 70%; /* warm orange for dark mode */
+    --forge-bg: 220 40% 5%; /* deep charcoal background for dark mode */
 
     /* Dark mode gradients */
-    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-violet)));
-    --gradient-spark-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--spark-twilight) / 0.1));
+    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-gold)));
+    --gradient-spark-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--spark-bright) / 0.1));
     
-    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
-    --gradient-loom-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--loom-ink) / 0.3));
+    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-deep)), hsl(var(--loom-royal)));
+    --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-bg)), hsl(var(--loom-accent) / 0.3));
     
-    --gradient-path: linear-gradient(135deg, hsl(var(--path-green)), hsl(var(--path-sage)));
-    --gradient-path-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--path-horizon) / 0.1));
+    --gradient-path: linear-gradient(135deg, hsl(var(--path-emerald)), hsl(var(--path-forest)));
+    --gradient-path-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--path-mint) / 0.1));
     
-    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-copper)), hsl(var(--forge-earth)));
-    --gradient-forge-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--forge-stone) / 0.2));
+    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-flame)), hsl(var(--forge-ember)));
+    --gradient-forge-bg: linear-gradient(180deg, hsl(var(--forge-bg)), hsl(var(--forge-accent) / 0.2));
     
     /* Dark shadows */
     --shadow-sanctuary: 0 20px 40px -12px hsl(0 0% 0% / 0.4);
