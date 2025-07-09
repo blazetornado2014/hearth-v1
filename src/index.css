@@ -81,12 +81,15 @@ All colors MUST be HSL.
     
     --gradient-loom: linear-gradient(135deg, hsl(var(--loom-deep)), hsl(var(--loom-royal)));
     --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-bg)), hsl(var(--loom-accent) / 0.2));
+    --gradient-loom-flow: linear-gradient(45deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
     
     --gradient-path: linear-gradient(135deg, hsl(var(--path-emerald)), hsl(var(--path-forest)));
     --gradient-path-bg: linear-gradient(180deg, hsl(var(--path-bg)), hsl(var(--path-mint) / 0.1));
+    --gradient-path-horizon: linear-gradient(90deg, hsl(var(--path-green)), hsl(var(--path-horizon)));
     
     --gradient-forge: linear-gradient(135deg, hsl(var(--forge-flame)), hsl(var(--forge-ember)));
     --gradient-forge-bg: linear-gradient(180deg, hsl(var(--forge-bg)), hsl(var(--forge-accent) / 0.2));
+    --gradient-forge-workshop: linear-gradient(135deg, hsl(var(--forge-copper)), hsl(var(--forge-stone)));
     
     /* Clean shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
@@ -191,12 +194,15 @@ All colors MUST be HSL.
     
     --gradient-loom: linear-gradient(135deg, hsl(var(--loom-deep)), hsl(var(--loom-royal)));
     --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-bg)), hsl(var(--loom-accent) / 0.3));
+    --gradient-loom-flow: linear-gradient(45deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
     
     --gradient-path: linear-gradient(135deg, hsl(var(--path-emerald)), hsl(var(--path-forest)));
     --gradient-path-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--path-mint) / 0.1));
+    --gradient-path-horizon: linear-gradient(90deg, hsl(var(--path-green)), hsl(var(--path-horizon)));
     
     --gradient-forge: linear-gradient(135deg, hsl(var(--forge-flame)), hsl(var(--forge-ember)));
     --gradient-forge-bg: linear-gradient(180deg, hsl(var(--forge-bg)), hsl(var(--forge-accent) / 0.2));
+    --gradient-forge-workshop: linear-gradient(135deg, hsl(var(--forge-copper)), hsl(var(--forge-stone)));
     
     /* Dark shadows */
     --shadow-sanctuary: 0 20px 40px -12px hsl(0 0% 0% / 0.4);
