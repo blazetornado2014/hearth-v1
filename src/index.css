@@ -552,10 +552,16 @@ All colors MUST be HSL.
   
   h1 {
     letter-spacing: -0.02em;
+    font-size: clamp(1.875rem, 8vw, 3rem);
   }
   
   h2 {
     letter-spacing: -0.01em;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 1.875rem);
   }
   
   blockquote {
@@ -568,6 +574,76 @@ All colors MUST be HSL.
     font-size: 2rem;
     left: -0.25rem;
     top: -0.5rem;
+  }
+  
+  /* Mobile-specific spacing adjustments */
+  .bg-spark-sanctuary,
+  .bg-loom-sanctuary,
+  .bg-path-sanctuary,
+  .bg-forge-sanctuary {
+    background-size: 200% 200%;
+    background-position: center;
+  }
+  
+  /* Reduce glow effects on mobile for performance */
+  .glow-spark,
+  .glow-loom,
+  .glow-path,
+  .glow-forge {
+    box-shadow: 0 0 15px hsl(var(--element-glow) / 0.2);
+  }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  
+  /* Tablet spacing */
+  .sanctuary-overlay::before {
+    background: radial-gradient(circle at 40% 25%, hsl(var(--element-glow) / 0.1) 0%, transparent 55%),
+                radial-gradient(circle at 60% 75%, hsl(var(--element-glow) / 0.08) 0%, transparent 55%);
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1440px) {
+  .sanctuary-overlay::before {
+    background: radial-gradient(circle at 25% 20%, hsl(var(--element-glow) / 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 75% 80%, hsl(var(--element-glow) / 0.1) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, hsl(var(--element-glow) / 0.05) 0%, transparent 60%);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .transition-whisper,
+  .transition-elemental {
+    padding: 0.5rem;
+    margin: -0.5rem;
+  }
+  
+  /* Simplify animations for touch devices */
+  .animate-electric-dance,
+  .animate-lightning-whisper,
+  .animate-mist-flow,
+  .animate-ink-ripple,
+  .animate-starlight-twinkle,
+  .animate-forest-sway,
+  .animate-ember-glow,
+  .animate-molten-flow {
+    animation-duration: 4s;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .hover\:scale-105:hover {
+    transform: none;
   }
 }
 
