@@ -4,14 +4,16 @@ import { Button } from "@/components/ui/button";
 const LoomSection = () => {
   return (
     <section className="relative py-20 bg-loom-bg overflow-hidden">
-      {/* Deep purple mystical atmosphere */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-loom-royal/15 to-transparent rounded-full blur-2xl animate-breathe"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-radial from-loom-accent/10 to-transparent rounded-full blur-xl animate-breathe delay-1000"></div>
+      {/* Deep mystical atmosphere */}
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-gradient-radial from-loom-royal/40 to-transparent rounded-full blur-2xl animate-breathe"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-gradient-radial from-loom-blue/30 to-transparent rounded-full blur-xl animate-flow-gentle"></div>
         
-        {/* Mystical purple drops */}
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-loom-royal rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 bg-loom-accent rounded-full animate-pulse delay-500"></div>
+        {/* Mystical threads and wisps */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-loom-lavender rounded-full animate-breathe shadow-lg shadow-loom-lavender/60"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-loom-blue rounded-full animate-flow-gentle delay-500 shadow-md shadow-loom-blue/50"></div>
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-loom-royal rounded-full animate-breathe delay-700"></div>
+        <div className="absolute bottom-1/2 left-1/3 w-1 h-1 bg-loom-accent/80 rounded-full animate-settle delay-300"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -19,54 +21,43 @@ const LoomSection = () => {
           {/* Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 flex items-center justify-center">
-              {/* Flowing threads visualization */}
+              {/* Loom weaving visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-loom rounded-full animate-breathe shadow-lg shadow-loom-blue/30"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-loom rounded-full animate-breathe shadow-lg shadow-loom-blue/30"></div>
                 
-                {/* Flowing threads */}
-                <svg className="w-full h-full opacity-40" viewBox="0 0 320 320">
-                  <path
-                    d="M50 160 Q160 80 270 160 Q160 240 50 160"
-                    stroke="hsl(var(--loom-blue) / 0.6)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-flow-gentle"
-                  />
-                  <path
-                    d="M80 100 Q160 160 240 220"
-                    stroke="hsl(var(--loom-lavender) / 0.4)"
-                    strokeWidth="1.5"
-                    fill="none"
-                    className="animate-settle delay-500"
-                  />
-                  <path
-                    d="M80 220 Q160 160 240 100"
-                    stroke="hsl(var(--loom-blue) / 0.3)"
-                    strokeWidth="1"
-                    fill="none"
-                    className="animate-settle delay-1000"
-                  />
-                </svg>
+                {/* Weaving pattern grid */}
+                <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-3 p-8 opacity-30">
+                  <div className="bg-loom-blue/40 rounded-sm animate-flow-gentle delay-100"></div>
+                  <div className="bg-loom-lavender/30 rounded-sm animate-breathe delay-200"></div>
+                  <div className="bg-loom-royal/35 rounded-sm animate-settle delay-300"></div>
+                  <div className="bg-loom-lavender/25 rounded-sm animate-flow-gentle delay-400"></div>
+                  <div className="bg-loom-blue/20 rounded-sm animate-breathe delay-500"></div>
+                  <div className="bg-loom-ink/30 rounded-sm animate-settle delay-600"></div>
+                  <div className="bg-loom-royal/25 rounded-sm animate-flow-gentle delay-700"></div>
+                  <div className="bg-loom-lavender/35 rounded-sm animate-breathe delay-800"></div>
+                  <div className="bg-loom-blue/30 rounded-sm animate-settle delay-900"></div>
+                </div>
                 
-                {/* Gentle ripples */}
-                <div className="absolute inset-0 border border-loom-blue/15 rounded-full animate-breathe"></div>
-                <div className="absolute inset-8 border border-loom-lavender/10 rounded-full animate-breathe delay-1000"></div>
+                {/* Processing threads */}
+                <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-loom-lavender rounded-full animate-breathe"></div>
+                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-loom-blue rounded-full animate-flow-gentle delay-300"></div>
+                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-loom-royal rounded-full animate-settle delay-600"></div>
                 
-                {/* Processing dots */}
-                <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-loom-blue rounded-full animate-settle"></div>
-                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-loom-lavender rounded-full animate-settle delay-700"></div>
+                {/* Loom borders */}
+                <div className="absolute inset-0 border-2 border-loom-blue/15 rounded-lg animate-breathe"></div>
+                <div className="absolute inset-6 border border-loom-lavender/10 rounded-lg animate-flow-gentle delay-500"></div>
               </div>
             </div>
             
-            {/* Misty atmosphere */}
-            <div className="absolute inset-0 bg-gradient-radial from-loom-mist/10 to-transparent rounded-full blur-2xl animate-breathe"></div>
+            {/* Mystical atmosphere */}
+            <div className="absolute inset-0 bg-gradient-radial from-loom-mist/10 to-transparent rounded-lg blur-2xl animate-breathe"></div>
           </div>
 
           {/* Content - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              <span className="text-white/60">Meet</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-loom font-medium">
+              <span className="text-loom-lavender/90">Meet</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-loom font-medium text-6xl md:text-7xl">
                 Loom
               </span>
               <span className="block text-white/90">Your Emotional Weaver</span>
@@ -80,15 +71,15 @@ const LoomSection = () => {
 
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3 text-white">
-                <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-gradient-loom rounded-full animate-breathe shadow-lg shadow-loom-blue/50"></div>
                 <span className="text-sm font-medium">Emotional Processing</span>
               </div>
               <div className="flex items-center gap-3 text-white">
-                <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse delay-300"></div>
+                <div className="w-3 h-3 bg-gradient-loom rounded-full animate-flow-gentle delay-300 shadow-lg shadow-loom-lavender/40"></div>
                 <span className="text-sm font-medium">Patient Witnessing</span>
               </div>
               <div className="flex items-center gap-3 text-white">
-                <div className="w-2 h-2 bg-gradient-loom rounded-full animate-pulse delay-600"></div>
+                <div className="w-3 h-3 bg-gradient-loom rounded-full animate-settle delay-600 shadow-lg shadow-loom-blue/40"></div>
                 <span className="text-sm font-medium">Natural Unfolding</span>
               </div>
             </div>

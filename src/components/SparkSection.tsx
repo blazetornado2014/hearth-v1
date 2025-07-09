@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 const SparkSection = () => {
   return (
     <section className="relative py-20 bg-spark-bg overflow-hidden">
-      {/* Bright golden atmosphere with sparks */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-radial from-spark-electric/20 to-transparent rounded-full blur-2xl animate-electric-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-radial from-spark-gold/15 to-transparent rounded-full blur-xl animate-lightning-flicker"></div>
+      {/* Electric atmosphere */}
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-gradient-radial from-spark-electric/40 to-transparent rounded-full blur-2xl animate-electric-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-gradient-radial from-spark-gold/30 to-transparent rounded-full blur-xl animate-lightning-flicker"></div>
         
-        {/* Bright golden particles */}
-        <div className="absolute top-32 left-32 w-2 h-2 bg-spark-electric rounded-full animate-lightning-flicker shadow-lg shadow-spark-electric/50"></div>
-        <div className="absolute bottom-40 right-40 w-1.5 h-1.5 bg-spark-gold rounded-full animate-electric-pulse delay-500 shadow-md shadow-spark-gold/40"></div>
-        <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-spark-electric rounded-full animate-lightning-flicker delay-1000"></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-spark-gold rounded-full animate-electric-pulse delay-700"></div>
+        {/* Electric sparks and energy */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-spark-electric rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/60"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-spark-gold rounded-full animate-lightning-flicker delay-500 shadow-md shadow-spark-gold/50"></div>
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-spark-electric rounded-full animate-electric-pulse delay-700"></div>
+        <div className="absolute bottom-1/2 left-1/3 w-1 h-1 bg-spark-gold/80 rounded-full animate-lightning-flicker delay-300"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -21,60 +21,72 @@ const SparkSection = () => {
           {/* Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 flex items-center justify-center">
-              {/* Electric core visualization */}
+              {/* Electric energy visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-spark rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/30"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-spark rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/30"></div>
                 
-                {/* Golden rings */}
-                <div className="absolute inset-0 border-2 border-spark-electric/30 rounded-full animate-lightning-flicker"></div>
-                <div className="absolute inset-8 border border-spark-gold/25 rounded-full animate-pulse delay-500"></div>
-                <div className="absolute inset-16 border border-spark-electric/15 rounded-full animate-pulse delay-1000"></div>
+                {/* Lightning bolt grid */}
+                <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-4 p-8 opacity-40">
+                  <div className="bg-spark-electric/30 rounded-sm animate-lightning-flicker delay-100"></div>
+                  <div className="bg-spark-gold/25 rounded-sm animate-electric-pulse delay-200"></div>
+                  <div className="bg-spark-bright/35 rounded-sm animate-lightning-flicker delay-300"></div>
+                  <div className="bg-spark-gold/20 rounded-sm animate-electric-pulse delay-400"></div>
+                  <div className="bg-spark-electric/25 rounded-sm animate-lightning-flicker delay-500"></div>
+                  <div className="bg-spark-bright/30 rounded-sm animate-electric-pulse delay-600"></div>
+                  <div className="bg-spark-electric/35 rounded-sm animate-lightning-flicker delay-700"></div>
+                  <div className="bg-spark-gold/30 rounded-sm animate-electric-pulse delay-800"></div>
+                  <div className="bg-spark-bright/25 rounded-sm animate-lightning-flicker delay-900"></div>
+                </div>
                 
-                {/* Golden particles */}
-                <div className="absolute top-1/4 left-3/4 w-2 h-2 bg-spark-electric rounded-full animate-lightning-flicker"></div>
-                <div className="absolute bottom-1/4 right-3/4 w-1.5 h-1.5 bg-spark-gold rounded-full animate-pulse delay-700"></div>
-                <div className="absolute top-3/4 left-1/4 w-1 h-1 bg-spark-electric rounded-full animate-lightning-flicker delay-300"></div>
+                {/* Electric sparks */}
+                <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-spark-electric rounded-full animate-electric-pulse"></div>
+                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-spark-gold rounded-full animate-lightning-flicker delay-300"></div>
+                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-spark-electric rounded-full animate-electric-pulse delay-600"></div>
+                
+                {/* Energy borders */}
+                <div className="absolute inset-0 border-2 border-spark-electric/15 rounded-lg animate-electric-pulse"></div>
+                <div className="absolute inset-6 border border-spark-gold/10 rounded-lg animate-lightning-flicker delay-500"></div>
               </div>
             </div>
-
-            {/* Electric atmosphere */}
-            <div className="absolute inset-0 bg-gradient-radial from-spark-electric/8 to-transparent rounded-full blur-2xl animate-glow-pulse"></div>
+            
+            {/* Electric field atmosphere */}
+            <div className="absolute inset-0 bg-gradient-radial from-spark-bright/10 to-transparent rounded-lg blur-2xl animate-electric-pulse"></div>
           </div>
 
           {/* Content - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              <span className="text-foreground/60">Meet</span>
+              <span className="text-spark-gold/90">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-spark font-medium text-6xl md:text-7xl">
                 Spark
               </span>
-              <span className="block text-foreground">Your Electric Guide</span>
+              <span className="block text-gray-800">Your Inner Illuminator</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed font-light mb-8">
-              When confusion clouds your path, Spark offers electric clarity. This companion doesn't give you answers — 
-              it illuminates questions you didn't know you had. Quick insights, gentle revelations, 
-              and the perfect moment of "aha" when everything clicks into place.
+            <p className="text-lg text-gray-700 leading-relaxed font-light mb-8">
+              Your journey begins here. Spark doesn't create insights from thin air — 
+              it illuminates what's already within you. Like lightning revealing a landscape in darkness, 
+              this companion helps you discover the patterns, wisdom, and clarity you already possess.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground">
+              <div className="flex items-center gap-3 text-gray-800">
                 <div className="w-3 h-3 bg-gradient-spark rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/50"></div>
-                <span className="text-sm font-medium">Lightning-Fast Insights</span>
+                <span className="text-sm font-medium">Inner Illumination</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-3 h-3 bg-gradient-spark rounded-full animate-lightning-flicker delay-300 shadow-lg shadow-spark-gold/50"></div>
+              <div className="flex items-center gap-3 text-gray-800">
+                <div className="w-3 h-3 bg-gradient-spark rounded-full animate-lightning-flicker delay-300 shadow-lg shadow-spark-gold/40"></div>
                 <span className="text-sm font-medium">Pattern Recognition</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
+              <div className="flex items-center gap-3 text-gray-800">
                 <div className="w-3 h-3 bg-gradient-spark rounded-full animate-electric-pulse delay-600 shadow-lg shadow-spark-electric/40"></div>
-                <span className="text-sm font-medium">Gentle Revelations</span>
+                <span className="text-sm font-medium">Gentle Awakening</span>
               </div>
             </div>
 
             <div className="pt-6 border-t border-spark-electric/30">
               <p className="text-sm text-spark-electric italic font-medium">
-                "In a flash of insight, clarity emerges from complexity"
+                "The light you seek was always within you"
               </p>
             </div>
           </div>
