@@ -43,10 +43,19 @@ All colors MUST be HSL.
     --sanctuary-forest: 150 35% 40%; /* deeper forest */
     --sanctuary-twilight: 230 50% 25%; /* deeper twilight */
     
+    /* Spark element - electric energy */
+    --spark-electric: 55 100% 85%; /* electric pale yellow */
+    --spark-violet: 270 70% 80%; /* white-violet */
+    --spark-twilight: 230 60% 15%; /* deeper twilight for spark bg */
+    
     /* Gradients for magical feel */
     --gradient-sanctuary: linear-gradient(135deg, hsl(var(--sanctuary-glow)), hsl(var(--primary)));
     --gradient-twilight: linear-gradient(180deg, hsl(var(--background)), hsl(var(--sanctuary-twilight) / 0.1));
     --gradient-earth: linear-gradient(90deg, hsl(var(--sanctuary-earth)), hsl(var(--secondary)));
+    
+    /* Spark gradients - electric energy */
+    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-violet)));
+    --gradient-spark-bg: linear-gradient(180deg, hsl(var(--spark-twilight)), hsl(var(--sanctuary-twilight)));
     
     /* Shadows with warm tones */
     --shadow-sanctuary: 0 20px 40px -12px hsl(var(--primary) / 0.25);

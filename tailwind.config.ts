@@ -59,6 +59,12 @@ export default {
 					forest: 'hsl(var(--sanctuary-forest))',
 					twilight: 'hsl(var(--sanctuary-twilight))'
 				},
+				/* Spark element colors */
+				spark: {
+					electric: 'hsl(var(--spark-electric))',
+					violet: 'hsl(var(--spark-violet))',
+					twilight: 'hsl(var(--spark-twilight))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -73,7 +79,9 @@ export default {
 			backgroundImage: {
 				'gradient-sanctuary': 'var(--gradient-sanctuary)',
 				'gradient-twilight': 'var(--gradient-twilight)',
-				'gradient-earth': 'var(--gradient-earth)'
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-spark': 'var(--gradient-spark)',
+				'gradient-spark-bg': 'var(--gradient-spark-bg)'
 			},
 			boxShadow: {
 				'sanctuary': 'var(--shadow-sanctuary)',
@@ -130,6 +138,31 @@ export default {
 					'50%': {
 						opacity: '0.8'
 					}
+				},
+				/* Spark electric animations */
+				'electric-pulse': {
+					'0%, 100%': {
+						opacity: '0.6',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.05)'
+					}
+				},
+				'lightning-flicker': {
+					'0%, 100%': {
+						opacity: '0.8'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'15%': {
+						opacity: '0.6'
+					},
+					'25%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -137,7 +170,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'float-gentle': 'float-gentle 6s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 3s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+				'electric-pulse': 'electric-pulse 2s ease-in-out infinite',
+				'lightning-flicker': 'lightning-flicker 4s ease-in-out infinite'
 			}
 		}
 	},
