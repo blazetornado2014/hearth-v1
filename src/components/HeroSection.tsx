@@ -15,6 +15,11 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center">
+        {/* Hearth Brand Identity */}
+        <div className="mb-4">
+          <span className="text-lg md:text-xl text-primary font-medium tracking-wider">HEARTH</span>
+        </div>
+        
         {/* Clean, Duolingo-style Headline */}
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-foreground">
           Master your personal elements

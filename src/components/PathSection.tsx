@@ -19,46 +19,50 @@ const PathSection = () => {
           {/* Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img 
-                  src={pathHorizon} 
-                  alt="Gentle guidance horizon" 
-                  className="w-48 h-48 opacity-50 filter drop-shadow-lg"
-                  style={{ filter: 'drop-shadow(0 0 10px hsl(var(--path-green) / 0.15))' }}
-                />
-              </div>
-              
-              {/* Simplified paths */}
+              {/* Path navigation visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-path rounded-full animate-pulse shadow-lg shadow-path-green/20"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-path rounded-full animate-grow-gentle shadow-lg shadow-path-green/30"></div>
                 
-                {/* Simple path lines */}
-                <svg className="w-full h-full opacity-30" viewBox="0 0 320 320">
+                {/* Navigation paths */}
+                <svg className="w-full h-full opacity-50" viewBox="0 0 320 320">
                   <path
                     d="M80 240 Q160 160 240 80"
+                    stroke="hsl(var(--path-green) / 0.6)"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeDasharray="8,6"
+                    className="animate-path-emerge"
+                  />
+                  <path
+                    d="M100 160 L220 160"
+                    stroke="hsl(var(--path-sage) / 0.4)"
+                    strokeWidth="2"
+                    fill="none"
+                    className="animate-path-emerge delay-500"
+                  />
+                  <path
+                    d="M160 100 L160 220"
                     stroke="hsl(var(--path-green) / 0.3)"
                     strokeWidth="1.5"
                     fill="none"
-                    strokeDasharray="6,4"
-                    className="animate-pulse"
-                  />
-                  <path
-                    d="M160 160 L240 160"
-                    stroke="hsl(var(--path-sage) / 0.2)"
-                    strokeWidth="1"
-                    fill="none"
-                    className="animate-pulse delay-1000"
+                    strokeDasharray="4,3"
+                    className="animate-path-emerge delay-1000"
                   />
                 </svg>
                 
-                {/* Gentle rings */}
-                <div className="absolute inset-0 border border-path-green/10 rounded-full animate-pulse"></div>
-                <div className="absolute inset-8 border border-path-sage/8 rounded-full animate-pulse delay-1000"></div>
+                {/* Direction indicators */}
+                <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-path-green rounded-full animate-horizon-drift"></div>
+                <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-path-sage rounded-full animate-grow-gentle delay-300"></div>
+                <div className="absolute top-2/3 right-1/2 w-1 h-1 bg-path-green rounded-full animate-horizon-drift delay-700"></div>
+                
+                {/* Compass rings */}
+                <div className="absolute inset-0 border border-path-green/15 rounded-full animate-grow-gentle"></div>
+                <div className="absolute inset-12 border border-path-sage/10 rounded-full animate-grow-gentle delay-500"></div>
               </div>
             </div>
             
-            {/* Soft glow */}
-            <div className="absolute inset-0 bg-gradient-radial from-path-green/5 to-transparent rounded-full blur-2xl"></div>
+            {/* Natural atmosphere */}
+            <div className="absolute inset-0 bg-gradient-radial from-path-horizon/8 to-transparent rounded-full blur-2xl animate-horizon-drift"></div>
           </div>
 
           {/* Content - Right */}

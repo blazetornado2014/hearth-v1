@@ -20,27 +20,24 @@ const SparkSection = () => {
           {/* Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img 
-                  src={sparkIcon} 
-                  alt="Electric insight symbol" 
-                  className="w-48 h-48 opacity-60 filter drop-shadow-lg"
-                  style={{ filter: 'drop-shadow(0 0 15px hsl(var(--spark-electric) / 0.2))' }}
-                />
-              </div>
-              
-              {/* Simplified electric core */}
+              {/* Electric core visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-spark rounded-full animate-pulse shadow-lg shadow-spark-electric/30"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-spark rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/30"></div>
                 
-                {/* Subtle aura rings */}
-                <div className="absolute inset-0 border border-spark-electric/15 rounded-full animate-pulse"></div>
-                <div className="absolute inset-8 border border-spark-violet/10 rounded-full animate-pulse delay-1000"></div>
+                {/* Electric rings */}
+                <div className="absolute inset-0 border-2 border-spark-electric/20 rounded-full animate-lightning-flicker"></div>
+                <div className="absolute inset-8 border border-spark-violet/15 rounded-full animate-pulse delay-500"></div>
+                <div className="absolute inset-16 border border-spark-electric/10 rounded-full animate-pulse delay-1000"></div>
+                
+                {/* Electric particles */}
+                <div className="absolute top-1/4 left-3/4 w-2 h-2 bg-spark-electric rounded-full animate-lightning-flicker"></div>
+                <div className="absolute bottom-1/4 right-3/4 w-1.5 h-1.5 bg-spark-violet rounded-full animate-pulse delay-700"></div>
+                <div className="absolute top-3/4 left-1/4 w-1 h-1 bg-spark-electric rounded-full animate-lightning-flicker delay-300"></div>
               </div>
             </div>
 
-            {/* Gentle glow */}
-            <div className="absolute inset-0 bg-gradient-radial from-spark-electric/5 to-transparent rounded-full blur-2xl"></div>
+            {/* Electric atmosphere */}
+            <div className="absolute inset-0 bg-gradient-radial from-spark-electric/8 to-transparent rounded-full blur-2xl animate-glow-pulse"></div>
           </div>
 
           {/* Content - Right */}

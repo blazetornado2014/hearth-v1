@@ -19,35 +19,36 @@ const ForgeSection = () => {
           {/* Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img 
-                  src={forgeTools} 
-                  alt="Creative forge tools" 
-                  className="w-48 h-48 opacity-50 filter drop-shadow-lg"
-                  style={{ filter: 'drop-shadow(0 0 10px hsl(var(--forge-copper) / 0.15))' }}
-                />
-              </div>
-              
-              {/* Simplified creation core */}
+              {/* Creative forge visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-forge rounded-sm animate-pulse shadow-lg shadow-forge-copper/20"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-forge rounded-sm animate-forge-build shadow-lg shadow-forge-copper/30"></div>
                 
-                {/* Simple grid pattern */}
-                <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4 p-12 opacity-20">
-                  <div className="bg-forge-copper/20 rounded-sm animate-pulse"></div>
-                  <div className="bg-forge-earth/15 rounded-sm animate-pulse delay-300"></div>
-                  <div className="bg-forge-earth/20 rounded-sm animate-pulse delay-600"></div>
-                  <div className="bg-forge-copper/15 rounded-sm animate-pulse delay-900"></div>
+                {/* Building blocks grid */}
+                <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-3 p-8 opacity-30">
+                  <div className="bg-forge-copper/40 rounded-sm animate-forge-build delay-100"></div>
+                  <div className="bg-forge-earth/30 rounded-sm animate-forge-build delay-200"></div>
+                  <div className="bg-forge-stone/35 rounded-sm animate-forge-build delay-300"></div>
+                  <div className="bg-forge-earth/25 rounded-sm animate-forge-build delay-400"></div>
+                  <div className="bg-forge-copper/20 rounded-sm animate-radiant-glow delay-500"></div>
+                  <div className="bg-forge-charcoal/30 rounded-sm animate-forge-build delay-600"></div>
+                  <div className="bg-forge-stone/25 rounded-sm animate-forge-build delay-700"></div>
+                  <div className="bg-forge-earth/35 rounded-sm animate-forge-build delay-800"></div>
+                  <div className="bg-forge-copper/30 rounded-sm animate-forge-build delay-900"></div>
                 </div>
                 
-                {/* Gentle borders */}
-                <div className="absolute inset-0 border border-forge-copper/10 rounded-lg animate-pulse"></div>
-                <div className="absolute inset-4 border border-forge-earth/8 rounded-lg animate-pulse delay-1000"></div>
+                {/* Creation sparks */}
+                <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-forge-copper rounded-full animate-tool-rhythm"></div>
+                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-forge-earth rounded-full animate-radiant-glow delay-300"></div>
+                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-forge-copper rounded-full animate-tool-rhythm delay-600"></div>
+                
+                {/* Workshop borders */}
+                <div className="absolute inset-0 border-2 border-forge-copper/15 rounded-lg animate-tool-rhythm"></div>
+                <div className="absolute inset-6 border border-forge-earth/10 rounded-lg animate-radiant-glow delay-500"></div>
               </div>
             </div>
             
-            {/* Soft glow */}
-            <div className="absolute inset-0 bg-gradient-radial from-forge-copper/5 to-transparent rounded-lg blur-2xl"></div>
+            {/* Workshop atmosphere */}
+            <div className="absolute inset-0 bg-gradient-radial from-forge-stone/10 to-transparent rounded-lg blur-2xl animate-radiant-glow"></div>
           </div>
 
           {/* Content - Right */}
