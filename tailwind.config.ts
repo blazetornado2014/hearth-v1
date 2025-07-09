@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				/* Custom sanctuary colors */
+				sanctuary: {
+					glow: 'hsl(var(--sanctuary-glow))',
+					earth: 'hsl(var(--sanctuary-earth))',
+					forest: 'hsl(var(--sanctuary-forest))',
+					twilight: 'hsl(var(--sanctuary-twilight))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +69,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-sanctuary': 'var(--gradient-sanctuary)',
+				'gradient-twilight': 'var(--gradient-twilight)',
+				'gradient-earth': 'var(--gradient-earth)'
+			},
+			boxShadow: {
+				'sanctuary': 'var(--shadow-sanctuary)',
+				'gentle': 'var(--shadow-gentle)'
+			},
+			transitionTimingFunction: {
+				'sanctuary': 'cubic-bezier(0.23, 1, 0.32, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +103,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				/* Sanctuary animations */
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'float-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						opacity: '0.5'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'float-gentle': 'float-gentle 6s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite'
 			}
 		}
 	},
