@@ -57,32 +57,39 @@ const LoomSection = () => {
           {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
-              <span className="text-slate-200">Where</span>
+              <span className="text-slate-200">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 font-medium">
-                Stillness
+                Loom
               </span>
-              <span className="block text-slate-200">Speaks</span>
+              <span className="block text-slate-200">Your Emotional Weaver</span>
             </h2>
 
             <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
-              In the quiet sanctuary of your inner waters, where thoughts settle like ink in still pools. 
-              Here, beneath the surface, truth unfolds in gentle ripples — 
-              revealing what your heart already knows.
+              After Spark illuminates, Loom helps you process. This companion creates space for your emotions 
+              to unfold naturally — no rushing, no fixing, just gentle witnessing. 
+              Like threads settling into patterns, your feelings find their place here.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-blue-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse shadow-lg shadow-blue-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Deep Listening</span>
+                <span className="text-sm font-medium tracking-wide">Emotional Processing</span>
               </div>
               <div className="flex items-center gap-4 text-indigo-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-pulse delay-700 shadow-lg shadow-indigo-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Inner Knowing</span>
+                <span className="text-sm font-medium tracking-wide">Patient Witnessing</span>
               </div>
               <div className="flex items-center gap-4 text-slate-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-slate-400 to-blue-400 rounded-full animate-pulse delay-1400 shadow-lg shadow-slate-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Gentle Unfolding</span>
+                <span className="text-sm font-medium tracking-wide">Natural Unfolding</span>
               </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-sm text-slate-400 mb-4">When you're ready to find direction...</p>
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 border border-white/20 rounded-lg text-white font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                Meet Path →
+              </button>
             </div>
           </div>
         </div>

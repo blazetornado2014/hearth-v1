@@ -85,32 +85,39 @@ const PathSection = () => {
           {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
-              <span className="text-slate-200">Follow</span>
+              <span className="text-slate-200">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-medium">
-                Ancient
+                Path
               </span>
-              <span className="block text-slate-200">Trails</span>
+              <span className="block text-slate-200">Your Gentle Navigator</span>
             </h2>
 
             <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
-              Through twilight forests where your ancestors walked, guided by stars that remember your name. 
-              Here, the path reveals itself not as destination, but as the sacred act of walking — 
-              each step a prayer, each choice a constellation.
+              After processing with Loom, Path offers gentle guidance. This companion doesn't push or rush — 
+              it simply shows you the next right step. Like ancient trails that know the way, 
+              Path helps you trust your own inner compass and move forward with confidence.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-emerald-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Sacred Direction</span>
+                <span className="text-sm font-medium tracking-wide">Gentle Guidance</span>
               </div>
               <div className="flex items-center gap-4 text-teal-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse delay-700 shadow-lg shadow-teal-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Ancestral Wisdom</span>
+                <span className="text-sm font-medium tracking-wide">Natural Navigation</span>
               </div>
               <div className="flex items-center gap-4 text-green-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full animate-pulse delay-1400 shadow-lg shadow-green-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Living Compass</span>
+                <span className="text-sm font-medium tracking-wide">Inner Compass</span>
               </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-sm text-slate-400 mb-4">Ready to take inspired action?</p>
+              <button className="px-6 py-3 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 border border-white/20 rounded-lg text-white font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                Meet Forge →
+              </button>
             </div>
           </div>
         </div>

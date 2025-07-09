@@ -72,32 +72,39 @@ const ForgeSection = () => {
           {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
             <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
-              <span className="text-slate-200">Shape</span>
+              <span className="text-slate-200">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 font-medium">
-                Sacred
+                Forge
               </span>
-              <span className="block text-slate-200">Fire</span>
+              <span className="block text-slate-200">Your Creative Partner</span>
             </h2>
 
             <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
-              In the underground sanctuary where dreams become substance, where the molten core of intention 
-              meets the ancient stone of commitment. Here, beneath the mountain's heart, 
-              your visions are hammered into being — not through force, but through devotion.
+              The final companion in your journey. Forge takes the insights from Spark, the processing from Loom, 
+              and the direction from Path — and helps you create. Not through pressure or deadlines, 
+              but through gentle, sustainable action that honors your natural rhythm.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-orange-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-amber-400 rounded-sm animate-pulse shadow-lg shadow-orange-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Sacred Intention</span>
+                <span className="text-sm font-medium tracking-wide">Gentle Creation</span>
               </div>
               <div className="flex items-center gap-4 text-red-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-red-400 to-orange-400 rounded-sm animate-pulse delay-500 shadow-lg shadow-red-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Molten Focus</span>
+                <span className="text-sm font-medium tracking-wide">Sustainable Action</span>
               </div>
               <div className="flex items-center gap-4 text-amber-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-sm animate-pulse delay-1000 shadow-lg shadow-amber-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Living Creation</span>
+                <span className="text-sm font-medium tracking-wide">Natural Rhythm</span>
               </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-sm text-slate-400 mb-4">Ready to begin your journey?</p>
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-400/30 to-red-400/30 border border-white/30 rounded-lg text-white font-medium hover:bg-white/20 transition-all duration-300 backdrop-blur-sm text-lg">
+                Get Early Access
+              </button>
             </div>
           </div>
         </div>

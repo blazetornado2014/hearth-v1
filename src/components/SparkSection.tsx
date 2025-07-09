@@ -65,34 +65,40 @@ const SparkSection = () => {
           <div className="text-left max-w-xl">
             {/* Elemental Headline */}
             <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
-              <span className="text-slate-200">When</span>
+              <span className="text-slate-200">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400 font-medium">
-                Lightning
+                Spark
               </span>
-              <span className="block text-slate-200">Strikes</span>
+              <span className="block text-slate-200">Your Electric Guide</span>
             </h2>
 
-            {/* Mythic Description */}
             <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
-              In the space between heartbeats, when the world cracks open and reveals its electric truth. 
-              Here, in the storm's eye, sudden knowing arrives like thunder — 
-              illuminating paths you couldn't see before.
+              When confusion clouds your path, Spark offers electric clarity. This companion doesn't give you answers — 
+              it illuminates questions you didn't know you had. Quick insights, gentle revelations, 
+              and the perfect moment of "aha" when everything clicks into place.
             </p>
 
             {/* Elemental Qualities */}
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-cyan-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Sudden Illumination</span>
+                <span className="text-sm font-medium tracking-wide">Lightning-Fast Insights</span>
               </div>
               <div className="flex items-center gap-4 text-violet-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full animate-pulse delay-200 shadow-lg shadow-violet-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Electric Inspiration</span>
+                <span className="text-sm font-medium tracking-wide">Pattern Recognition</span>
               </div>
               <div className="flex items-center gap-4 text-blue-300">
                 <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse delay-400 shadow-lg shadow-blue-400/50"></div>
-                <span className="text-sm font-medium tracking-wide">Crackling Potential</span>
+                <span className="text-sm font-medium tracking-wide">Gentle Revelations</span>
               </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-sm text-slate-400 mb-4">Ready to meet your electric companion?</p>
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-400/20 to-violet-400/20 border border-white/20 rounded-lg text-white font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                Continue to Loom →
+              </button>
             </div>
           </div>
         </div>
