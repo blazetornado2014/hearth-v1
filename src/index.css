@@ -60,6 +60,12 @@ All colors MUST be HSL.
     --path-sand: 45 20% 80%; /* sand-colored */
     --path-horizon: 200 20% 85%; /* misty blue horizon */
     
+    /* Forge element - doing and creation */
+    --forge-charcoal: 220 15% 25%; /* deep charcoal */
+    --forge-copper: 25 45% 60%; /* soft copper */
+    --forge-earth: 30 20% 55%; /* earth-toned neutral */
+    --forge-stone: 200 8% 75%; /* workshop stone */
+    
     /* Gradients for magical feel */
     --gradient-sanctuary: linear-gradient(135deg, hsl(var(--sanctuary-glow)), hsl(var(--primary)));
     --gradient-twilight: linear-gradient(180deg, hsl(var(--background)), hsl(var(--sanctuary-twilight) / 0.1));
@@ -78,6 +84,11 @@ All colors MUST be HSL.
     --gradient-path: linear-gradient(135deg, hsl(var(--path-green)), hsl(var(--path-sage)));
     --gradient-path-bg: linear-gradient(180deg, hsl(var(--path-horizon)), hsl(var(--background)));
     --gradient-path-horizon: linear-gradient(90deg, hsl(var(--path-sand) / 0.4), hsl(var(--path-green) / 0.3));
+    
+    /* Forge gradients - doing and creation */
+    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-copper)), hsl(var(--forge-earth)));
+    --gradient-forge-bg: linear-gradient(180deg, hsl(var(--forge-stone)), hsl(var(--background)));
+    --gradient-forge-workshop: linear-gradient(90deg, hsl(var(--forge-charcoal) / 0.3), hsl(var(--forge-copper) / 0.4));
     
     /* Shadows with warm tones */
     --shadow-sanctuary: 0 20px 40px -12px hsl(var(--primary) / 0.25);

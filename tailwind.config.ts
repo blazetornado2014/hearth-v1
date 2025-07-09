@@ -79,6 +79,13 @@ export default {
 					sand: 'hsl(var(--path-sand))',
 					horizon: 'hsl(var(--path-horizon))'
 				},
+				/* Forge element colors */
+				forge: {
+					charcoal: 'hsl(var(--forge-charcoal))',
+					copper: 'hsl(var(--forge-copper))',
+					earth: 'hsl(var(--forge-earth))',
+					stone: 'hsl(var(--forge-stone))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -101,7 +108,10 @@ export default {
 				'gradient-loom-flow': 'var(--gradient-loom-flow)',
 				'gradient-path': 'var(--gradient-path)',
 				'gradient-path-bg': 'var(--gradient-path-bg)',
-				'gradient-path-horizon': 'var(--gradient-path-horizon)'
+				'gradient-path-horizon': 'var(--gradient-path-horizon)',
+				'gradient-forge': 'var(--gradient-forge)',
+				'gradient-forge-bg': 'var(--gradient-forge-bg)',
+				'gradient-forge-workshop': 'var(--gradient-forge-workshop)'
 			},
 			boxShadow: {
 				'sanctuary': 'var(--shadow-sanctuary)',
@@ -251,6 +261,36 @@ export default {
 						strokeDashoffset: '0',
 						opacity: '0.6'
 					}
+				},
+				/* Forge building animations */
+				'forge-build': {
+					'0%': {
+						transform: 'scale(0.9) rotate(-2deg)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1'
+					}
+				},
+				'tool-rhythm': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'translateY(-2px) rotate(1deg)'
+					},
+					'75%': {
+						transform: 'translateY(-1px) rotate(-0.5deg)'
+					}
+				},
+				'radiant-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 10px hsl(var(--forge-copper) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px hsl(var(--forge-copper) / 0.6)'
+					}
 				}
 			},
 			animation: {
@@ -266,7 +306,10 @@ export default {
 				'settle': 'settle 0.8s ease-out',
 				'horizon-drift': 'horizon-drift 12s ease-in-out infinite',
 				'grow-gentle': 'grow-gentle 1s ease-out',
-				'path-emerge': 'path-emerge 3s ease-out'
+				'path-emerge': 'path-emerge 3s ease-out',
+				'forge-build': 'forge-build 0.8s ease-out',
+				'tool-rhythm': 'tool-rhythm 3s ease-in-out infinite',
+				'radiant-glow': 'radiant-glow 2s ease-in-out infinite'
 			}
 		}
 	},
