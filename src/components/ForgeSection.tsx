@@ -82,13 +82,15 @@ const ForgeSection = () => {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4">Ready to begin your journey?</p>
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all hover:scale-105"
-            >
-                Get Early Access
+            <div className="pt-8 border-t border-border text-center">
+              <p className="text-sm text-muted-foreground/80 italic mb-6">
+                "In the forge of creation, vision becomes reality"
+              </p>
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all hover:scale-105"
+              >
+                Begin Your Journey
               </Button>
             </div>
           </div>

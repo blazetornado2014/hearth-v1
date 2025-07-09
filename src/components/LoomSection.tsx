@@ -94,10 +94,9 @@ const LoomSection = () => {
             </div>
 
             <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">When you're ready to find direction...</p>
-              <Button variant="outline" className="hover:bg-secondary/10 transition-colors">
-                Meet Path →
-              </Button>
+              <p className="text-sm text-muted-foreground/80 italic">
+                "Like threads in a loom, emotions weave into understanding"
+              </p>
             </div>
           </div>
         </div>

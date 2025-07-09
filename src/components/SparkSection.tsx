@@ -72,10 +72,9 @@ const SparkSection = () => {
             </div>
 
             <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">When you're ready to process deeper...</p>
-              <Button variant="outline" className="hover:bg-primary/10 transition-colors">
-                Continue to Loom →
-              </Button>
+              <p className="text-sm text-muted-foreground/80 italic">
+                "In a flash of insight, clarity emerges from complexity"
+              </p>
             </div>
           </div>
         </div>

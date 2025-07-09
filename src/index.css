@@ -79,6 +79,12 @@ All colors MUST be HSL.
     
     /* Smooth transitions */
     --transition-sanctuary: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    /* Element-specific animations */
+    --transition-electric: all 0.2s ease-out;
+    --transition-flow: all 0.6s ease-in-out;
+    --transition-grow: all 0.8s ease-out;
+    --transition-forge: all 0.4s ease-in-out;
 
     --radius: 0.5rem;
 
@@ -185,3 +191,86 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Element-specific animations */
+@keyframes electric-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes lightning-flicker {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.7; }
+  50% { opacity: 1; }
+  75% { opacity: 0.9; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.02); opacity: 1; }
+}
+
+@keyframes flow-gentle {
+  0% { stroke-dashoffset: 20; opacity: 0.6; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -20; opacity: 0.6; }
+}
+
+@keyframes settle {
+  0% { transform: translateY(-2px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes grow-gentle {
+  0% { transform: scale(0.98); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes horizon-drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(1px) translateY(-1px); }
+  50% { transform: translateX(-1px) translateY(1px); }
+  75% { transform: translateX(1px) translateY(1px); }
+}
+
+@keyframes path-emerge {
+  0% { stroke-dasharray: 0, 100; opacity: 0.3; }
+  50% { stroke-dasharray: 50, 100; opacity: 0.8; }
+  100% { stroke-dasharray: 100, 100; opacity: 1; }
+}
+
+@keyframes forge-build {
+  0% { transform: scale(0.8) rotate(-2deg); opacity: 0.3; }
+  50% { transform: scale(1.02) rotate(1deg); opacity: 0.7; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes radiant-glow {
+  0%, 100% { opacity: 0.6; filter: brightness(1); }
+  50% { opacity: 0.9; filter: brightness(1.2); }
+}
+
+@keyframes tool-rhythm {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(0.95); }
+  75% { transform: scale(1.05); }
+}
+
+.animate-electric-pulse { animation: electric-pulse 2s ease-in-out infinite; }
+.animate-lightning-flicker { animation: lightning-flicker 1.5s ease-in-out infinite; }
+.animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-breathe { animation: breathe 4s ease-in-out infinite; }
+.animate-flow-gentle { animation: flow-gentle 3s ease-in-out infinite; }
+.animate-settle { animation: settle 2s ease-out infinite alternate; }
+.animate-grow-gentle { animation: grow-gentle 3s ease-out infinite alternate; }
+.animate-horizon-drift { animation: horizon-drift 4s ease-in-out infinite; }
+.animate-path-emerge { animation: path-emerge 2s ease-out infinite; }
+.animate-forge-build { animation: forge-build 2s ease-out infinite alternate; }
+.animate-radiant-glow { animation: radiant-glow 3s ease-in-out infinite; }
+.animate-tool-rhythm { animation: tool-rhythm 1.8s ease-in-out infinite; }

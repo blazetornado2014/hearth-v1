@@ -97,10 +97,9 @@ const PathSection = () => {
             </div>
 
             <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">Ready to take inspired action?</p>
-              <Button variant="outline" className="hover:bg-accent/10 transition-colors">
-                Meet Forge →
-              </Button>
+              <p className="text-sm text-muted-foreground/80 italic">
+                "Every journey begins with a single, mindful step forward"
+              </p>
             </div>
           </div>
         </div>

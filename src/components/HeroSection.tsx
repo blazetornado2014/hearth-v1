@@ -27,16 +27,16 @@ const HeroSection = () => {
 
         {/* Simple, Clear Subheading */}
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-          Four gentle companions that guide your journey to emotional wellness and personal growth
+          Four gentle digital companions that guide your journey to emotional clarity and purposeful action
         </p>
 
         {/* Single, Prominent CTA */}
         <div className="mb-16">
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all hover:scale-105"
           >
-            Get Started Free
+            Start Your Journey
           </Button>
         </div>
 

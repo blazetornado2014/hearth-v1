@@ -19,9 +19,9 @@ const IntroSection = () => {
         </h2>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-          Four ancient elements, reimagined as gentle guides for your modern life. 
-          Each companion offers a unique lens for processing emotions, making decisions, 
-          and finding your way forward — without judgment, pressure, or overwhelm.
+          Four ancient elements, reimagined as gentle guides for your digital life. 
+          Each companion offers a unique approach to processing thoughts, emotions, and decisions — 
+          creating a complete system for personal growth without judgment or pressure.
         </p>
 
         {/* Companion preview */}
