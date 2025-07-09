@@ -3,15 +3,16 @@ import { Button } from "@/components/ui/button";
 
 const PathSection = () => {
   return (
-    <section className="relative py-20 bg-gradient-path-bg overflow-hidden">
-      {/* Simplified horizon atmosphere */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-radial from-path-green/6 to-transparent rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-32 h-32 bg-gradient-radial from-path-sage/4 to-transparent rounded-full blur-xl animate-pulse delay-1000"></div>
+    <section className="relative py-20 bg-white overflow-hidden">
+      {/* Clean natural atmosphere */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-radial from-path-green/20 to-transparent rounded-full blur-3xl animate-grow-gentle"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-gradient-radial from-path-sage/15 to-transparent rounded-full blur-2xl animate-horizon-drift"></div>
         
-        {/* Subtle constellation points */}
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-path-green/40 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 bg-path-sage/30 rounded-full animate-pulse delay-500"></div>
+        {/* Natural growth elements */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-path-green rounded-full animate-grow-gentle shadow-sm shadow-path-green/30"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-path-sage rounded-full animate-horizon-drift delay-500"></div>
+        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-path-green/80 rounded-full animate-grow-gentle delay-1000"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -67,37 +68,37 @@ const PathSection = () => {
 
           {/* Content - Right */}
           <div className="text-left max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              <span className="text-muted-foreground">Meet</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-path font-medium">
+            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+              <span className="text-path-green/80">Meet</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-path font-medium text-6xl md:text-7xl">
                 Path
               </span>
-              <span className="block text-muted-foreground">Your Gentle Navigator</span>
+              <span className="block text-gray-700">Your Gentle Navigator</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed font-light mb-8">
+            <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
               After processing with Loom, Path offers gentle guidance. This companion doesn't push or rush — 
               it simply shows you the next right step. Like ancient trails that know the way, 
               Path helps you trust your own inner compass and move forward with confidence.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-path rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-3 text-gray-800">
+                <div className="w-3 h-3 bg-gradient-path rounded-full animate-grow-gentle shadow-sm shadow-path-green/40"></div>
                 <span className="text-sm font-medium">Gentle Guidance</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-path rounded-full animate-pulse delay-300"></div>
+              <div className="flex items-center gap-3 text-gray-800">
+                <div className="w-3 h-3 bg-gradient-path rounded-full animate-horizon-drift delay-300 shadow-sm shadow-path-sage/40"></div>
                 <span className="text-sm font-medium">Natural Navigation</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-path rounded-full animate-pulse delay-600"></div>
+              <div className="flex items-center gap-3 text-gray-800">
+                <div className="w-3 h-3 bg-gradient-path rounded-full animate-grow-gentle delay-600 shadow-sm shadow-path-green/30"></div>
                 <span className="text-sm font-medium">Inner Compass</span>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground/80 italic">
+            <div className="pt-6 border-t border-path-green/30">
+              <p className="text-sm text-path-green italic font-medium">
                 "Every journey begins with a single, mindful step forward"
               </p>
             </div>

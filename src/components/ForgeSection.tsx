@@ -3,15 +3,17 @@ import { Button } from "@/components/ui/button";
 
 const ForgeSection = () => {
   return (
-    <section className="relative py-20 bg-gradient-forge-bg overflow-hidden">
-      {/* Simplified forge atmosphere */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-1/3 left-1/2 w-48 h-48 bg-gradient-radial from-forge-copper/8 to-transparent rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-32 h-32 bg-gradient-radial from-forge-earth/6 to-transparent rounded-full blur-xl animate-pulse delay-1000"></div>
+    <section className="relative py-20 bg-forge-charcoal overflow-hidden">
+      {/* Molten forge atmosphere */}
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-gradient-radial from-forge-copper/40 to-transparent rounded-full blur-2xl animate-radiant-glow"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-gradient-radial from-forge-earth/30 to-transparent rounded-full blur-xl animate-forge-build"></div>
         
-        {/* Subtle sparks */}
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-forge-copper/40 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 bg-forge-earth/30 rounded-full animate-pulse delay-500"></div>
+        {/* Molten sparks and embers */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-forge-copper rounded-full animate-tool-rhythm shadow-lg shadow-forge-copper/60"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-primary rounded-full animate-radiant-glow delay-500 shadow-md shadow-primary/50"></div>
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-forge-copper rounded-full animate-tool-rhythm delay-700"></div>
+        <div className="absolute bottom-1/2 left-1/3 w-1 h-1 bg-primary/80 rounded-full animate-forge-build delay-300"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-8">
@@ -53,42 +55,42 @@ const ForgeSection = () => {
 
           {/* Content - Right */}
           <div className="text-left max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              <span className="text-muted-foreground">Meet</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-forge font-medium">
+            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+              <span className="text-forge-copper/90">Meet</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-forge font-medium text-6xl md:text-7xl">
                 Forge
               </span>
-              <span className="block text-muted-foreground">Your Creative Partner</span>
+              <span className="block text-white/90">Your Creative Partner</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed font-light mb-8">
+            <p className="text-lg text-white/80 leading-relaxed font-light mb-8">
               The final companion in your journey. Forge takes the insights from Spark, the processing from Loom, 
               and the direction from Path — and helps you create. Not through pressure or deadlines, 
               but through gentle, sustainable action that honors your natural rhythm.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-forge rounded-sm animate-pulse"></div>
+              <div className="flex items-center gap-3 text-white">
+                <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-tool-rhythm shadow-lg shadow-forge-copper/50"></div>
                 <span className="text-sm font-medium">Gentle Creation</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-forge rounded-sm animate-pulse delay-300"></div>
+              <div className="flex items-center gap-3 text-white">
+                <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-radiant-glow delay-300 shadow-lg shadow-primary/40"></div>
                 <span className="text-sm font-medium">Sustainable Action</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground">
-                <div className="w-2 h-2 bg-gradient-forge rounded-sm animate-pulse delay-600"></div>
+              <div className="flex items-center gap-3 text-white">
+                <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-forge-build delay-600 shadow-lg shadow-forge-copper/40"></div>
                 <span className="text-sm font-medium">Natural Rhythm</span>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-border text-center">
-              <p className="text-sm text-muted-foreground/80 italic mb-6">
+            <div className="pt-8 border-t border-forge-copper/30 text-center">
+              <p className="text-sm text-forge-copper italic mb-6 font-medium">
                 "In the forge of creation, vision becomes reality"
               </p>
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all hover:scale-105"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg font-semibold rounded-2xl shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all hover:scale-105"
               >
                 Begin Your Journey
               </Button>
