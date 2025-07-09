@@ -111,7 +111,14 @@ export default {
 				'gradient-path-horizon': 'var(--gradient-path-horizon)',
 				'gradient-forge': 'var(--gradient-forge)',
 				'gradient-forge-bg': 'var(--gradient-forge-bg)',
-				'gradient-forge-workshop': 'var(--gradient-forge-workshop)'
+				'gradient-forge-workshop': 'var(--gradient-forge-workshop)',
+				'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))'
+			},
+			backgroundColor: {
+				'spark-bg': 'hsl(var(--spark-bg))',
+				'loom-bg': 'hsl(var(--loom-bg))',
+				'path-bg': 'hsl(var(--path-bg))',
+				'forge-bg': 'hsl(var(--forge-bg))'
 			},
 			boxShadow: {
 				'sanctuary': 'var(--shadow-sanctuary)',

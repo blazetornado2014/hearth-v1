@@ -41,24 +41,38 @@ All colors MUST be HSL.
     --spark-electric: 45 100% 50%; /* bright yellow */
     --spark-gold: 38 100% 60%; /* golden yellow */
     --spark-bright: 50 100% 70%; /* light yellow */
+    --spark-violet: 270 100% 80%; /* electric violet */
+    --spark-twilight: 250 80% 60%; /* twilight purple */
     --spark-bg: 0 0% 100%; /* white background */
     
     /* Loom Element - Deep purple/midnight */
     --loom-deep: 250 60% 25%; /* deep purple */
     --loom-royal: 260 80% 35%; /* royal purple */
     --loom-accent: 270 70% 50%; /* purple accent */
+    --loom-blue: 245 80% 40%; /* deep blue */
+    --loom-lavender: 280 60% 70%; /* lavender */
+    --loom-ink: 240 90% 20%; /* ink blue */
+    --loom-mist: 260 40% 80%; /* light mist */
     --loom-bg: 250 40% 15%; /* dark purple background */
     
     /* Path Element - Fresh green/nature */
     --path-emerald: 140 70% 45%; /* emerald green */
     --path-forest: 120 60% 35%; /* forest green */
     --path-mint: 150 50% 60%; /* mint accent */
+    --path-green: 135 65% 40%; /* path green */
+    --path-sage: 125 45% 50%; /* sage green */
+    --path-sand: 45 40% 80%; /* sand beige */
+    --path-horizon: 160 30% 70%; /* horizon blue-green */
     --path-bg: 0 0% 100%; /* white background */
     
     /* Forge Element - Bold orange/charcoal */
     --forge-flame: 25 100% 55%; /* bright orange */
     --forge-ember: 15 90% 50%; /* deep orange */
     --forge-accent: 35 80% 60%; /* warm orange */
+    --forge-charcoal: 220 30% 10%; /* charcoal */
+    --forge-copper: 25 85% 60%; /* copper */
+    --forge-earth: 30 70% 45%; /* earth brown */
+    --forge-stone: 40 20% 60%; /* stone gray */
     --forge-bg: 220 30% 10%; /* deep charcoal background */
 
     /* Element Gradients */
@@ -140,21 +154,35 @@ All colors MUST be HSL.
     --spark-electric: 45 90% 60%; /* bright yellow for dark mode */
     --spark-gold: 38 85% 65%; /* golden yellow for dark mode */
     --spark-bright: 50 80% 75%; /* light yellow for dark mode */
+    --spark-violet: 270 95% 85%; /* electric violet for dark mode */
+    --spark-twilight: 250 75% 70%; /* twilight purple for dark mode */
     --spark-bg: 0 0% 8%; /* dark background for spark in dark mode */
     
     --loom-deep: 250 70% 35%; /* deep purple for dark mode */
     --loom-royal: 260 85% 45%; /* royal purple for dark mode */
     --loom-accent: 270 75% 60%; /* purple accent for dark mode */
+    --loom-blue: 245 85% 50%; /* deep blue for dark mode */
+    --loom-lavender: 280 65% 75%; /* lavender for dark mode */
+    --loom-ink: 240 95% 30%; /* ink blue for dark mode */
+    --loom-mist: 260 45% 85%; /* light mist for dark mode */
     --loom-bg: 250 50% 8%; /* dark purple background for dark mode */
     
     --path-emerald: 140 75% 55%; /* emerald green for dark mode */
     --path-forest: 120 65% 45%; /* forest green for dark mode */
     --path-mint: 150 55% 70%; /* mint accent for dark mode */
+    --path-green: 135 70% 50%; /* path green for dark mode */
+    --path-sage: 125 50% 60%; /* sage green for dark mode */
+    --path-sand: 45 45% 85%; /* sand beige for dark mode */
+    --path-horizon: 160 35% 75%; /* horizon blue-green for dark mode */
     --path-bg: 0 0% 8%; /* dark background for path in dark mode */
     
     --forge-flame: 25 95% 65%; /* bright orange for dark mode */
     --forge-ember: 15 85% 60%; /* deep orange for dark mode */
     --forge-accent: 35 75% 70%; /* warm orange for dark mode */
+    --forge-charcoal: 220 35% 15%; /* charcoal for dark mode */
+    --forge-copper: 25 80% 70%; /* copper for dark mode */
+    --forge-earth: 30 65% 55%; /* earth brown for dark mode */
+    --forge-stone: 40 25% 70%; /* stone gray for dark mode */
     --forge-bg: 220 40% 5%; /* deep charcoal background for dark mode */
 
     /* Dark mode gradients */
@@ -191,6 +219,12 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 }
 

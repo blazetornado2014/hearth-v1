@@ -73,25 +73,25 @@ const PathSection = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-path font-medium text-6xl md:text-7xl">
                 Path
               </span>
-              <span className="block text-gray-700">Your Gentle Navigator</span>
+              <span className="block text-path-green/80">Your Gentle Navigator</span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+            <p className="text-lg text-path-forest/70 leading-relaxed font-light mb-8">
               After processing with Loom, Path offers gentle guidance. This companion doesn't push or rush — 
               it simply shows you the next right step. Like ancient trails that know the way, 
               Path helps you trust your own inner compass and move forward with confidence.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-gray-800">
+              <div className="flex items-center gap-3 text-path-forest">
                 <div className="w-3 h-3 bg-gradient-path rounded-full animate-grow-gentle shadow-sm shadow-path-green/40"></div>
                 <span className="text-sm font-medium">Gentle Guidance</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-800">
+              <div className="flex items-center gap-3 text-path-forest">
                 <div className="w-3 h-3 bg-gradient-path rounded-full animate-horizon-drift delay-300 shadow-sm shadow-path-sage/40"></div>
                 <span className="text-sm font-medium">Natural Navigation</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-800">
+              <div className="flex items-center gap-3 text-path-forest">
                 <div className="w-3 h-3 bg-gradient-path rounded-full animate-grow-gentle delay-600 shadow-sm shadow-path-green/30"></div>
                 <span className="text-sm font-medium">Inner Compass</span>
               </div>
