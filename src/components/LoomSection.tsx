@@ -2,87 +2,86 @@ import loomThreads from "@/assets/loom-threads.png";
 
 const LoomSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-loom-bg overflow-hidden flex items-center">
-      {/* Subtle ambient glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-loom-lavender/5 to-transparent pointer-events-none"></div>
+    <section className="relative min-h-screen bg-gradient-to-b from-slate-800 via-indigo-800 to-slate-700 overflow-hidden flex items-center">
+      {/* Mist and still water atmosphere */}
+      <div className="absolute inset-0 opacity-40">
+        {/* Ethereal mist layers */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-600/20 via-blue-800/30 to-slate-700/40"></div>
+        <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-gradient-radial from-blue-400/8 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-purple-400/6 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+        
+        {/* Ink drops in still water */}
+        <div className="absolute top-32 left-32 w-2 h-2 bg-indigo-300 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute bottom-40 right-40 w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse delay-1000 opacity-50"></div>
+        <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-slate-300 rounded-full animate-pulse delay-1500 opacity-40"></div>
+        
+        {/* Silk threads flowing */}
+        <div className="absolute top-40 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-pulse opacity-30"></div>
+        <div className="absolute bottom-32 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-indigo-400/15 to-transparent animate-pulse delay-1000 opacity-25"></div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Visual Element - Left */}
+          {/* Fluid Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-96 h-96 flex items-center justify-center">
-              {/* Background threads image */}
+              {/* Ink swirling in water */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                   src={loomThreads} 
-                  alt="Flowing threads representing emotional processing" 
-                  className="w-72 h-72 opacity-40 animate-breathe"
+                  alt="Ink swirling in still water" 
+                  className="w-64 h-64 opacity-60 animate-pulse filter drop-shadow-lg"
+                  style={{ filter: 'drop-shadow(0 0 15px rgba(59, 130, 246, 0.2))' }}
                 />
               </div>
               
-              {/* Flowing concentric waves */}
+              {/* Concentric ripples */}
               <div className="absolute inset-0">
-                {/* Central processing point */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-6 h-6 bg-gradient-loom rounded-full animate-breathe shadow-lg shadow-loom-blue/30"></div>
-                </div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full animate-pulse shadow-lg shadow-blue-400/30"></div>
                 
-                {/* Flowing ripples */}
-                <div className="absolute inset-0 border border-loom-blue/20 rounded-full animate-breathe"></div>
-                <div className="absolute inset-8 border border-loom-lavender/15 rounded-full animate-breathe delay-1000"></div>
-                <div className="absolute inset-16 border border-loom-ink/10 rounded-full animate-breathe delay-2000"></div>
-              </div>
-
-              {/* Flowing ink streams */}
-              <div className="absolute inset-0">
-                {/* Vertical flow */}
-                <div className="absolute top-0 left-1/2 w-0.5 h-16 bg-gradient-to-b from-loom-blue to-transparent animate-settle opacity-50"></div>
-                <div className="absolute bottom-0 left-1/2 w-0.5 h-20 bg-gradient-to-t from-loom-lavender to-transparent animate-settle delay-500 opacity-60"></div>
+                {/* Flowing streams */}
+                <div className="absolute top-0 left-1/2 w-0.5 h-20 bg-gradient-to-b from-blue-300 to-transparent animate-pulse opacity-60"></div>
+                <div className="absolute bottom-0 left-1/2 w-0.5 h-24 bg-gradient-to-t from-indigo-300 to-transparent animate-pulse delay-500 opacity-50"></div>
                 
-                {/* Horizontal flow */}
-                <div className="absolute top-1/2 left-0 w-20 h-0.5 bg-gradient-to-r from-loom-ink to-transparent animate-settle delay-1000 opacity-40"></div>
-                <div className="absolute top-1/2 right-0 w-16 h-0.5 bg-gradient-to-l from-loom-blue to-transparent animate-settle delay-1500 opacity-45"></div>
+                {/* Ripple rings */}
+                <div className="absolute inset-0 border border-blue-400/20 rounded-full animate-pulse"></div>
+                <div className="absolute inset-8 border border-indigo-400/15 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute inset-16 border border-slate-400/10 rounded-full animate-pulse delay-2000"></div>
               </div>
             </div>
-
-            {/* Soft glow effect */}
-            <div className="absolute inset-0 bg-gradient-loom opacity-5 rounded-full blur-3xl animate-breathe"></div>
+            
+            {/* Soft mist glow */}
+            <div className="absolute inset-0 bg-gradient-radial from-blue-500/8 via-indigo-500/4 to-transparent rounded-full blur-3xl animate-pulse"></div>
           </div>
 
-          {/* Content - Right */}
+          {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
-            {/* Headline */}
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8 leading-tight">
-              Process
-              <span className="block text-loom-ink font-medium">What You</span>
-              <span className="block text-loom-lavender">Feel</span>
+            <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
+              <span className="text-slate-200">Where</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 font-medium">
+                Stillness
+              </span>
+              <span className="block text-slate-200">Speaks</span>
             </h2>
 
-            {/* Description */}
-            <div className="space-y-4 mb-10">
-              <p className="text-xl text-muted-foreground leading-relaxed font-light">
-                A safe, private space for introspection and emotional processing — 
-                where thoughts untangle, memories settle, and clarity slowly forms.
-              </p>
-              
-              <p className="text-base text-muted-foreground/80 leading-relaxed font-light italic">
-                The inner room where you gently lay your thoughts out to breathe.
-              </p>
-            </div>
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
+              In the quiet sanctuary of your inner waters, where thoughts settle like ink in still pools. 
+              Here, beneath the surface, truth unfolds in gentle ripples — 
+              revealing what your heart already knows.
+            </p>
 
-            {/* Element qualities */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-loom-blue">
-                <div className="w-2 h-2 bg-loom-blue rounded-full animate-breathe"></div>
-                <span className="text-sm font-medium">Journaling</span>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-blue-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse shadow-lg shadow-blue-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Deep Listening</span>
               </div>
-              <div className="flex items-center gap-3 text-loom-lavender">
-                <div className="w-2 h-2 bg-loom-lavender rounded-full animate-breathe delay-700"></div>
-                <span className="text-sm font-medium">Reflection</span>
+              <div className="flex items-center gap-4 text-indigo-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-pulse delay-700 shadow-lg shadow-indigo-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Inner Knowing</span>
               </div>
-              <div className="flex items-center gap-3 text-loom-ink">
-                <div className="w-2 h-2 bg-loom-ink rounded-full animate-breathe delay-1400"></div>
-                <span className="text-sm font-medium">Emotional Honesty</span>
+              <div className="flex items-center gap-4 text-slate-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-slate-400 to-blue-400 rounded-full animate-pulse delay-1400 shadow-lg shadow-slate-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Gentle Unfolding</span>
               </div>
             </div>
           </div>

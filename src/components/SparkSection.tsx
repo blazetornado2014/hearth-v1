@@ -2,78 +2,96 @@ import sparkIcon from "@/assets/spark-icon.png";
 
 const SparkSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-spark-bg overflow-hidden flex items-center">
-      {/* Subtle ambient glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-spark-electric/5 to-transparent pointer-events-none"></div>
+    <section className="relative min-h-screen bg-gradient-to-b from-slate-900 via-indigo-900 to-slate-800 overflow-hidden flex items-center">
+      {/* Storm-lit sky atmosphere */}
+      <div className="absolute inset-0 opacity-30">
+        {/* Electric storm clouds */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-slate-900/40"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-violet-400/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-gradient-radial from-blue-400/15 to-transparent rounded-full blur-2xl animate-pulse delay-1000"></div>
+        
+        {/* Crackling aether particles */}
+        <div className="absolute top-20 left-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-32 w-0.5 h-0.5 bg-violet-300 rounded-full animate-ping delay-500"></div>
+        <div className="absolute bottom-32 left-1/3 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute top-1/2 right-1/4 w-0.5 h-0.5 bg-purple-300 rounded-full animate-ping delay-1500"></div>
+        
+        {/* Electric web lines */}
+        <div className="absolute top-32 left-10 w-40 h-0.5 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-pulse opacity-60"></div>
+        <div className="absolute bottom-40 right-16 w-32 h-0.5 bg-gradient-to-r from-transparent via-violet-400/40 to-transparent animate-pulse delay-700 opacity-50"></div>
+        <div className="absolute top-2/3 left-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent animate-pulse delay-1200 opacity-40"></div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Visual Element - Left */}
+          {/* Elemental Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-96 h-96 flex items-center justify-center">
-              {/* Background spark icon */}
+              {/* Crackling storm nexus */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                   src={sparkIcon} 
-                  alt="Spark element symbol" 
-                  className="w-72 h-72 opacity-40 animate-electric-pulse"
+                  alt="Electric storm nexus" 
+                  className="w-64 h-64 opacity-70 animate-pulse filter drop-shadow-lg"
+                  style={{ filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.3))' }}
                 />
               </div>
               
-              {/* Branching lightning visualization */}
+              {/* Electric storm formation */}
               <div className="absolute inset-0">
-                {/* Central pulse */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-spark rounded-full animate-electric-pulse shadow-lg shadow-spark-electric/50"></div>
+                {/* Central electric core */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
                 
-                {/* Main lightning branches */}
-                <div className="absolute top-12 left-1/2 w-1 h-32 bg-gradient-to-b from-spark-electric to-transparent rotate-12 animate-lightning-flicker origin-top opacity-80"></div>
-                <div className="absolute bottom-12 left-1/2 w-0.5 h-24 bg-gradient-to-t from-spark-violet to-transparent -rotate-6 animate-lightning-flicker delay-300 origin-bottom opacity-70"></div>
+                {/* Lightning branches - more organic */}
+                <div className="absolute top-8 left-1/2 w-1.5 h-40 bg-gradient-to-b from-cyan-300 via-violet-300 to-transparent rotate-12 animate-pulse origin-top opacity-80 blur-sm"></div>
+                <div className="absolute bottom-8 left-1/2 w-1 h-32 bg-gradient-to-t from-blue-300 via-purple-300 to-transparent -rotate-6 animate-pulse delay-300 origin-bottom opacity-70 blur-sm"></div>
                 
-                {/* Side branches */}
-                <div className="absolute top-20 left-1/3 w-0.5 h-16 bg-gradient-to-b from-spark-electric to-transparent rotate-45 animate-lightning-flicker delay-500 origin-top opacity-60"></div>
-                <div className="absolute top-32 right-1/3 w-0.5 h-12 bg-gradient-to-b from-spark-violet to-transparent -rotate-30 animate-lightning-flicker delay-800 origin-top opacity-50"></div>
+                {/* Crackling branches */}
+                <div className="absolute top-16 left-1/4 w-0.5 h-20 bg-gradient-to-b from-cyan-400 to-transparent rotate-45 animate-pulse delay-500 origin-top opacity-60"></div>
+                <div className="absolute top-24 right-1/4 w-0.5 h-16 bg-gradient-to-b from-violet-400 to-transparent -rotate-30 animate-pulse delay-800 origin-top opacity-50"></div>
                 
-                {/* Energy rings */}
-                <div className="absolute inset-0 border border-spark-electric/20 rounded-full animate-electric-pulse"></div>
-                <div className="absolute inset-8 border border-spark-violet/15 rounded-full animate-electric-pulse delay-500"></div>
-                <div className="absolute inset-16 border border-spark-electric/10 rounded-full animate-electric-pulse delay-1000"></div>
+                {/* Electric aura rings */}
+                <div className="absolute inset-0 border border-cyan-400/30 rounded-full animate-ping"></div>
+                <div className="absolute inset-8 border border-violet-400/20 rounded-full animate-ping delay-500"></div>
+                <div className="absolute inset-16 border border-blue-400/15 rounded-full animate-ping delay-1000"></div>
               </div>
             </div>
 
-            {/* Soft glow effect */}
-            <div className="absolute inset-0 bg-gradient-spark opacity-5 rounded-full blur-3xl animate-glow-pulse"></div>
+            {/* Storm glow */}
+            <div className="absolute inset-0 bg-gradient-radial from-violet-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl animate-pulse"></div>
           </div>
 
-          {/* Content - Right */}
+          {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
-            {/* Headline */}
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8 leading-tight">
-              Catch the
-              <span className="block text-spark-electric font-medium">
-                Spark
+            {/* Elemental Headline */}
+            <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
+              <span className="text-slate-200">When</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400 font-medium">
+                Lightning
               </span>
+              <span className="block text-slate-200">Strikes</span>
             </h2>
 
-            {/* Description */}
-            <p className="text-xl text-muted-foreground leading-relaxed font-light mb-10">
-              A flash of insight, a surge of emotional energy — the moment something shifts. 
-              This is where ideas crackle into being, emotions are activated, 
-              and conversations begin their dance.
+            {/* Mythic Description */}
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
+              In the space between heartbeats, when the world cracks open and reveals its electric truth. 
+              Here, in the storm's eye, sudden knowing arrives like thunder — 
+              illuminating paths you couldn't see before.
             </p>
 
-            {/* Element qualities */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-spark-electric">
-                <div className="w-2 h-2 bg-spark-electric rounded-full animate-electric-pulse"></div>
-                <span className="text-sm font-medium">Sudden Clarity</span>
+            {/* Elemental Qualities */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-cyan-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Sudden Illumination</span>
               </div>
-              <div className="flex items-center gap-3 text-spark-violet">
-                <div className="w-2 h-2 bg-spark-violet rounded-full animate-electric-pulse delay-200"></div>
-                <span className="text-sm font-medium">Inspiration</span>
+              <div className="flex items-center gap-4 text-violet-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full animate-pulse delay-200 shadow-lg shadow-violet-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Electric Inspiration</span>
               </div>
-              <div className="flex items-center gap-3 text-spark-electric">
-                <div className="w-2 h-2 bg-spark-electric rounded-full animate-electric-pulse delay-400"></div>
-                <span className="text-sm font-medium">Initial Motion</span>
+              <div className="flex items-center gap-4 text-blue-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse delay-400 shadow-lg shadow-blue-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Crackling Potential</span>
               </div>
             </div>
           </div>
