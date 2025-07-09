@@ -55,36 +55,36 @@ const ForgeSection = () => {
           {/* Forge Wisdom */}
           <div className="text-left max-w-xl">
             <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              <span className="text-forge-copper whisper-text">Meet</span>
+              <span className="text-forge-copper/90">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-forge font-normal text-6xl md:text-7xl animate-ember-glow">
                 Forge
               </span>
-              <span className="block text-foreground">Your Creative Partner</span>
+              <span className="block text-white">Your Creative Partner</span>
             </h2>
 
-            <p className="text-lg text-foreground leading-relaxed mb-8">
+            <p className="text-lg text-white/90 leading-relaxed mb-8">
               The final companion in your journey. Forge takes the insights from Spark, the processing from Loom, 
               and the direction from Path — and helps you create. Not through pressure or deadlines, 
               but through gentle, sustainable action that honors your natural rhythm.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-forge-copper">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-forge-copper">
                 <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-ember-glow glow-forge"></div>
                 <span className="text-sm font-medium">Gentle Creation</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-forge-obsidian">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-forge-copper">
                 <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-molten-flow glow-forge" style={{animationDelay: '0.3s'}}></div>
                 <span className="text-sm font-medium">Sustainable Action</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-forge-copper">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-forge-copper">
                 <div className="w-3 h-3 bg-gradient-forge rounded-sm animate-ember-glow glow-forge" style={{animationDelay: '0.6s'}}></div>
                 <span className="text-sm font-medium">Natural Rhythm</span>
               </div>
             </div>
 
             <div className="pt-8 border-t border-forge-copper/20 text-center">
-              <blockquote className="text-sm text-forge-copper mb-6 border-none p-0 m-0 italic">
+              <blockquote className="text-sm text-forge-copper/90 mb-6 border-none p-0 m-0 italic">
                 "In the forge of creation, vision becomes reality"
               </blockquote>
               <Button 
