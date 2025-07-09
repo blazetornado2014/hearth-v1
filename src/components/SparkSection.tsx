@@ -42,15 +42,15 @@ const SparkSection = () => {
 
           {/* Spark Wisdom */}
           <div className="text-left max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight text-sanctuary-glow">
-              <span className="text-whisper whisper-text">Meet</span>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+              <span className="text-spark-electric whisper-text">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-spark font-normal text-6xl md:text-7xl animate-lightning-whisper">
                 Spark
               </span>
               <span className="block text-foreground">Your Electric Guide</span>
             </h2>
 
-            <p className="text-lg text-whisper leading-relaxed whisper-text mb-8">
+            <p className="text-lg text-foreground leading-relaxed mb-8">
               When confusion clouds your path, Spark offers electric clarity. This companion doesn't give you answers — 
               it illuminates questions you didn't know you had. Quick insights, gentle revelations, 
               and the perfect moment of "aha" when everything clicks into place.
@@ -59,20 +59,20 @@ const SparkSection = () => {
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-electric">
                 <div className="w-3 h-3 bg-gradient-spark rounded-full animate-electric-dance glow-spark"></div>
-                <span className="text-sm font-medium whisper-text">Lightning-Fast Insights</span>
+                <span className="text-sm font-medium">Lightning-Fast Insights</span>
               </div>
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-lightning">
                 <div className="w-3 h-3 bg-gradient-spark rounded-full animate-lightning-whisper glow-spark" style={{animationDelay: '0.3s'}}></div>
-                <span className="text-sm font-medium whisper-text">Pattern Recognition</span>
+                <span className="text-sm font-medium">Pattern Recognition</span>
               </div>
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-electric">
                 <div className="w-3 h-3 bg-gradient-spark rounded-full animate-electric-dance glow-spark" style={{animationDelay: '0.6s'}}></div>
-                <span className="text-sm font-medium whisper-text">Gentle Revelations</span>
+                <span className="text-sm font-medium">Gentle Revelations</span>
               </div>
             </div>
 
             <div className="pt-6 border-t border-spark-electric/20">
-              <blockquote className="text-sm text-spark-electric whisper-text border-none p-0 m-0">
+              <blockquote className="text-sm text-spark-electric border-none p-0 m-0 italic">
                 "In a flash of insight, clarity emerges from complexity"
               </blockquote>
             </div>

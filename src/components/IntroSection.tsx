@@ -13,12 +13,12 @@ const IntroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
-        <h2 className="text-3xl md:text-5xl font-light text-foreground mb-8 leading-tight text-sanctuary-glow">
-          <span className="block text-whisper whisper-text">Meet your</span>
+        <h2 className="text-3xl md:text-5xl font-light text-foreground mb-8 leading-tight">
+          <span className="block text-muted-foreground">Meet your</span>
           <span className="block text-primary font-normal">Digital Companions</span>
         </h2>
 
-        <p className="text-lg md:text-xl text-whisper max-w-3xl mx-auto mb-12 leading-relaxed whisper-text">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
           Four ancient elements, reimagined as gentle guides for your digital life. 
           Each companion offers a unique approach to processing thoughts, emotions, and decisions — 
           creating a complete system for personal growth without judgment or pressure.
@@ -28,31 +28,31 @@ const IntroSection = () => {
         <div className="grid md:grid-cols-4 gap-8 max-w-2xl mx-auto">
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="w-12 h-12 bg-gradient-to-r from-spark-electric to-spark-lightning rounded-full mx-auto mb-3 animate-electric-dance group-hover:animate-lightning-whisper transition-elemental glow-spark"></div>
-            <h3 className="text-sm font-medium text-foreground mb-1 whisper-text">Spark</h3>
-            <p className="text-xs text-whisper">Electric Insight</p>
+            <h3 className="text-sm font-medium text-foreground mb-1">Spark</h3>
+            <p className="text-xs text-muted-foreground">Electric Insight</p>
           </div>
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="w-12 h-12 bg-gradient-to-r from-loom-mist to-loom-ink rounded-full mx-auto mb-3 animate-mist-flow group-hover:animate-ink-ripple transition-elemental glow-loom" style={{animationDelay: '0.3s'}}></div>
-            <h3 className="text-sm font-medium text-foreground mb-1 whisper-text">Loom</h3>
-            <p className="text-xs text-whisper">Emotional Processing</p>
+            <h3 className="text-sm font-medium text-foreground mb-1">Loom</h3>
+            <p className="text-xs text-muted-foreground">Emotional Processing</p>
           </div>
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="w-12 h-12 bg-gradient-to-r from-path-emerald to-path-starlight rounded-full mx-auto mb-3 animate-forest-sway group-hover:animate-starlight-twinkle transition-elemental glow-path" style={{animationDelay: '0.6s'}}></div>
-            <h3 className="text-sm font-medium text-foreground mb-1 whisper-text">Path</h3>
-            <p className="text-xs text-whisper">Gentle Guidance</p>
+            <h3 className="text-sm font-medium text-foreground mb-1">Path</h3>
+            <p className="text-xs text-muted-foreground">Gentle Guidance</p>
           </div>
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="w-12 h-12 bg-gradient-to-r from-forge-copper to-forge-obsidian rounded-full mx-auto mb-3 animate-ember-glow group-hover:animate-molten-flow transition-elemental glow-forge" style={{animationDelay: '0.9s'}}></div>
-            <h3 className="text-sm font-medium text-foreground mb-1 whisper-text">Forge</h3>
-            <p className="text-xs text-whisper">Creative Action</p>
+            <h3 className="text-sm font-medium text-foreground mb-1">Forge</h3>
+            <p className="text-xs text-muted-foreground">Creative Action</p>
           </div>
         </div>
 
         <div className="mt-12 text-center">
-          <blockquote className="text-sm text-whisper mb-4 border-none p-0 m-0">
+          <blockquote className="text-sm text-muted-foreground mb-4 border-none p-0 m-0 italic">
             "Each companion holds ancient wisdom, adapted for your digital sanctuary"
           </blockquote>
           

@@ -65,37 +65,37 @@ const LoomSection = () => {
 
           {/* Loom Wisdom */}
           <div className="text-left max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight text-sanctuary-glow">
-              <span className="text-whisper whisper-text">Meet</span>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+              <span className="text-loom-mist whisper-text">Meet</span>
               <span className="block text-transparent bg-clip-text bg-gradient-loom font-normal animate-mist-flow">
                 Loom
               </span>
-              <span className="block text-foreground">Your Emotional Weaver</span>
+              <span className="block text-white">Your Emotional Weaver</span>
             </h2>
 
-            <p className="text-lg text-whisper leading-relaxed whisper-text mb-8">
+            <p className="text-lg text-white/90 leading-relaxed mb-8">
               After Spark illuminates, Loom helps you process. This companion creates space for your emotions 
               to unfold naturally — no rushing, no fixing, just gentle witnessing. 
               Like threads settling into patterns, your feelings find their place here.
             </p>
 
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-loom-mist">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-loom-mist">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-mist-flow glow-loom"></div>
-                <span className="text-sm font-medium whisper-text">Emotional Processing</span>
+                <span className="text-sm font-medium">Emotional Processing</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-loom-ink">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-loom-mist">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-ink-ripple glow-loom" style={{animationDelay: '0.3s'}}></div>
-                <span className="text-sm font-medium whisper-text">Patient Witnessing</span>
+                <span className="text-sm font-medium">Patient Witnessing</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-loom-mist">
+              <div className="flex items-center gap-3 text-white transition-whisper hover:text-loom-mist">
                 <div className="w-2 h-2 bg-gradient-loom rounded-full animate-mist-flow glow-loom" style={{animationDelay: '0.6s'}}></div>
-                <span className="text-sm font-medium whisper-text">Natural Unfolding</span>
+                <span className="text-sm font-medium">Natural Unfolding</span>
               </div>
             </div>
 
             <div className="pt-6 border-t border-loom-mist/20">
-              <blockquote className="text-sm text-loom-mist whisper-text border-none p-0 m-0">
+              <blockquote className="text-sm text-loom-mist border-none p-0 m-0 italic">
                 "Like threads in a loom, emotions weave into understanding"
               </blockquote>
             </div>

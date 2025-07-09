@@ -22,12 +22,12 @@ const HeroSection = () => {
         </div>
         
         {/* Mystical Headline */}
-        <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8 text-foreground text-sanctuary-glow">
+        <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8 text-foreground">
           Master your personal elements
         </h1>
 
         {/* Whispered Guidance */}
-        <p className="text-xl md:text-2xl text-whisper max-w-3xl mx-auto mb-12 leading-relaxed whisper-text">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
           Four gentle digital companions that guide your journey to emotional clarity and purposeful action
         </p>
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
 
         {/* Elemental Whispers */}
-        <div className="flex flex-wrap justify-center gap-8 text-whisper">
+        <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
           <span className="flex items-center gap-3 transition-whisper hover:text-foreground">
             <div className="w-2 h-2 bg-primary rounded-full animate-starlight-twinkle"></div>
             Emotional Processing
