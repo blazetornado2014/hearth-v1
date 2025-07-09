@@ -2,112 +2,114 @@ import pathHorizon from "@/assets/path-horizon.png";
 
 const PathSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-path-bg overflow-hidden flex items-center">
-      {/* Subtle ambient glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-path-green/5 to-transparent pointer-events-none"></div>
+    <section className="relative min-h-screen bg-gradient-to-b from-slate-700 via-emerald-900 to-slate-800 overflow-hidden flex items-center">
+      {/* Twilight forest atmosphere */}
+      <div className="absolute inset-0 opacity-35">
+        {/* Windswept dunes and forest mist */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-900/20 via-teal-800/30 to-slate-800/40"></div>
+        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-radial from-emerald-400/8 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-gradient-radial from-teal-400/6 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+        
+        {/* Constellation points */}
+        <div className="absolute top-24 left-24 w-1.5 h-1.5 bg-emerald-300 rounded-full animate-pulse opacity-70"></div>
+        <div className="absolute top-32 right-32 w-1 h-1 bg-teal-300 rounded-full animate-pulse delay-1000 opacity-60"></div>
+        <div className="absolute bottom-40 left-40 w-2 h-2 bg-green-300 rounded-full animate-pulse delay-1500 opacity-50"></div>
+        <div className="absolute top-2/3 right-1/3 w-0.5 h-0.5 bg-sage-300 rounded-full animate-pulse delay-2000 opacity-80"></div>
+        
+        {/* Horizon lines and trail markers */}
+        <div className="absolute top-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent animate-pulse opacity-30"></div>
+        <div className="absolute bottom-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-teal-400/15 to-transparent animate-pulse delay-1000 opacity-25"></div>
+        
+        {/* Windswept particles */}
+        <div className="absolute top-16 left-16 w-8 h-0.5 bg-gradient-to-r from-emerald-400/30 to-transparent animate-pulse opacity-40"></div>
+        <div className="absolute bottom-20 right-20 w-12 h-0.5 bg-gradient-to-l from-teal-400/25 to-transparent animate-pulse delay-700 opacity-35"></div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Visual Element - Left */}
+          {/* Constellation Visual - Left */}
           <div className="relative">
             <div className="relative mx-auto w-96 h-96 flex items-center justify-center">
-              {/* Background horizon image */}
+              {/* Twilight horizon */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                   src={pathHorizon} 
-                  alt="Path through nature toward horizon" 
-                  className="w-72 h-72 opacity-40 animate-grow-gentle"
+                  alt="Twilight path through ancient forest" 
+                  className="w-64 h-64 opacity-60 animate-pulse filter drop-shadow-lg"
+                  style={{ filter: 'drop-shadow(0 0 15px rgba(52, 211, 153, 0.15))' }}
                 />
               </div>
               
-              {/* Converging path lines */}
+              {/* Constellation map overlay */}
               <div className="absolute inset-0">
-                {/* Main path lines converging toward center/horizon */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/30"></div>
+                
+                {/* Converging paths */}
                 <svg className="w-full h-full" viewBox="0 0 400 400">
-                  {/* Left converging line */}
                   <path
                     d="M50 350 Q200 200 350 50"
-                    stroke="hsl(var(--path-green))"
-                    strokeWidth="1.5"
-                    fill="none"
-                    opacity="0.5"
-                    strokeDasharray="5,5"
-                    className="animate-path-emerge"
-                  />
-                  {/* Right converging line */}
-                  <path
-                    d="M50 50 Q200 200 350 350"
-                    stroke="hsl(var(--path-sage))"
-                    strokeWidth="1"
-                    fill="none"
-                    opacity="0.4"
-                    strokeDasharray="3,3"
-                    className="animate-path-emerge delay-1000"
-                  />
-                  {/* Horizontal horizon line */}
-                  <path
-                    d="M100 200 L300 200"
-                    stroke="hsl(var(--path-sand))"
+                    stroke="rgba(52, 211, 153, 0.4)"
                     strokeWidth="2"
                     fill="none"
-                    opacity="0.6"
-                    className="animate-path-emerge delay-2000"
+                    strokeDasharray="8,4"
+                    className="animate-pulse"
+                  />
+                  <path
+                    d="M50 50 Q200 200 350 350"
+                    stroke="rgba(20, 184, 166, 0.3)"
+                    strokeWidth="1.5"
+                    fill="none"
+                    strokeDasharray="6,3"
+                    className="animate-pulse delay-1000"
+                  />
+                  <path
+                    d="M100 200 L300 200"
+                    stroke="rgba(34, 197, 94, 0.5)"
+                    strokeWidth="2.5"
+                    fill="none"
+                    className="animate-pulse delay-2000"
                   />
                 </svg>
                 
-                {/* Growth center point */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-6 h-6 bg-gradient-path rounded-full animate-grow-gentle shadow-lg shadow-path-green/30"></div>
-                </div>
-              </div>
-
-              {/* Gentle expanding rings representing growth */}
-              <div className="absolute inset-0">
-                <div className="absolute inset-0 border border-path-green/15 rounded-full animate-grow-gentle"></div>
-                <div className="absolute inset-12 border border-path-sage/10 rounded-full animate-grow-gentle delay-1000"></div>
-                <div className="absolute inset-24 border border-path-sand/8 rounded-full animate-grow-gentle delay-2000"></div>
+                {/* Expanding guidance rings */}
+                <div className="absolute inset-0 border border-emerald-400/15 rounded-full animate-pulse"></div>
+                <div className="absolute inset-12 border border-teal-400/10 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute inset-24 border border-green-400/8 rounded-full animate-pulse delay-2000"></div>
               </div>
             </div>
-
-            {/* Soft directional glow */}
-            <div className="absolute inset-0 bg-gradient-path opacity-5 rounded-full blur-3xl animate-breathe"></div>
+            
+            {/* Twilight glow */}
+            <div className="absolute inset-0 bg-gradient-radial from-emerald-500/8 via-teal-500/4 to-transparent rounded-full blur-3xl animate-pulse"></div>
           </div>
 
-          {/* Content - Right */}
+          {/* Sacred Text - Right */}
           <div className="text-left max-w-xl">
-            {/* Headline */}
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8 leading-tight">
-              <span className="block">Grow</span>
-              <span className="block text-path-green font-medium">Toward</span>
-              <span className="block text-path-sage">What Matters</span>
+            <h2 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
+              <span className="text-slate-200">Follow</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-medium">
+                Ancient
+              </span>
+              <span className="block text-slate-200">Trails</span>
             </h2>
 
-            {/* Description */}
-            <div className="space-y-4 mb-10">
-              <p className="text-xl text-muted-foreground leading-relaxed font-light">
-                A compass for long-term personal development — helping you define values, 
-                set meaningful goals, and orient yourself on your life journey.
-              </p>
-              
-              <p className="text-base text-muted-foreground/80 leading-relaxed font-light italic">
-                Path doesn't push. It gently guides, where purpose is clarified 
-                and direction slowly emerges.
-              </p>
-            </div>
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-10">
+              Through twilight forests where your ancestors walked, guided by stars that remember your name. 
+              Here, the path reveals itself not as destination, but as the sacred act of walking — 
+              each step a prayer, each choice a constellation.
+            </p>
 
-            {/* Growth aspects */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-path-green">
-                <div className="w-2 h-2 bg-path-green rounded-full animate-grow-gentle"></div>
-                <span className="text-sm font-medium">Define Your Values</span>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-emerald-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Sacred Direction</span>
               </div>
-              <div className="flex items-center gap-3 text-path-sage">
-                <div className="w-2 h-2 bg-path-sage rounded-full animate-grow-gentle delay-700"></div>
-                <span className="text-sm font-medium">Set Meaningful Goals</span>
+              <div className="flex items-center gap-4 text-teal-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse delay-700 shadow-lg shadow-teal-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Ancestral Wisdom</span>
               </div>
-              <div className="flex items-center gap-3 text-path-sand">
-                <div className="w-2 h-2 bg-path-sand rounded-full animate-grow-gentle delay-1400"></div>
-                <span className="text-sm font-medium">Orient Your Journey</span>
+              <div className="flex items-center gap-4 text-green-300">
+                <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full animate-pulse delay-1400 shadow-lg shadow-green-400/50"></div>
+                <span className="text-sm font-medium tracking-wide">Living Compass</span>
               </div>
             </div>
           </div>
