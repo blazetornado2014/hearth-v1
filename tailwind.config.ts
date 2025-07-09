@@ -65,6 +65,13 @@ export default {
 					violet: 'hsl(var(--spark-violet))',
 					twilight: 'hsl(var(--spark-twilight))'
 				},
+				/* Loom element colors */
+				loom: {
+					blue: 'hsl(var(--loom-blue))',
+					lavender: 'hsl(var(--loom-lavender))',
+					ink: 'hsl(var(--loom-ink))',
+					mist: 'hsl(var(--loom-mist))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -81,7 +88,10 @@ export default {
 				'gradient-twilight': 'var(--gradient-twilight)',
 				'gradient-earth': 'var(--gradient-earth)',
 				'gradient-spark': 'var(--gradient-spark)',
-				'gradient-spark-bg': 'var(--gradient-spark-bg)'
+				'gradient-spark-bg': 'var(--gradient-spark-bg)',
+				'gradient-loom': 'var(--gradient-loom)',
+				'gradient-loom-bg': 'var(--gradient-loom-bg)',
+				'gradient-loom-flow': 'var(--gradient-loom-flow)'
 			},
 			boxShadow: {
 				'sanctuary': 'var(--shadow-sanctuary)',
@@ -163,6 +173,40 @@ export default {
 					'25%': {
 						opacity: '1'
 					}
+				},
+				/* Loom flowing animations */
+				'flow-gentle': {
+					'0%': {
+						transform: 'translateX(-100%) rotate(0deg)',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '0.6'
+					},
+					'100%': {
+						transform: 'translateX(100%) rotate(180deg)',
+						opacity: '0'
+					}
+				},
+				'breathe': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '0.4'
+					},
+					'50%': {
+						transform: 'scale(1.02)',
+						opacity: '0.6'
+					}
+				},
+				'settle': {
+					'0%': {
+						transform: 'translateY(-10px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -172,7 +216,10 @@ export default {
 				'float-gentle': 'float-gentle 6s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
 				'electric-pulse': 'electric-pulse 2s ease-in-out infinite',
-				'lightning-flicker': 'lightning-flicker 4s ease-in-out infinite'
+				'lightning-flicker': 'lightning-flicker 4s ease-in-out infinite',
+				'flow-gentle': 'flow-gentle 8s ease-in-out infinite',
+				'breathe': 'breathe 4s ease-in-out infinite',
+				'settle': 'settle 0.8s ease-out'
 			}
 		}
 	},

@@ -48,6 +48,12 @@ All colors MUST be HSL.
     --spark-violet: 270 70% 80%; /* white-violet */
     --spark-twilight: 230 60% 15%; /* deeper twilight for spark bg */
     
+    /* Loom element - emotional processing */
+    --loom-blue: 220 30% 75%; /* soft blue */
+    --loom-lavender: 260 25% 80%; /* dusty lavender */
+    --loom-ink: 225 20% 45%; /* ink-toned neutral */
+    --loom-mist: 220 15% 90%; /* soft mist background */
+    
     /* Gradients for magical feel */
     --gradient-sanctuary: linear-gradient(135deg, hsl(var(--sanctuary-glow)), hsl(var(--primary)));
     --gradient-twilight: linear-gradient(180deg, hsl(var(--background)), hsl(var(--sanctuary-twilight) / 0.1));
@@ -56,6 +62,11 @@ All colors MUST be HSL.
     /* Spark gradients - electric energy */
     --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)), hsl(var(--spark-violet)));
     --gradient-spark-bg: linear-gradient(180deg, hsl(var(--spark-twilight)), hsl(var(--sanctuary-twilight)));
+    
+    /* Loom gradients - emotional processing */
+    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-blue)), hsl(var(--loom-lavender)));
+    --gradient-loom-bg: linear-gradient(180deg, hsl(var(--loom-mist)), hsl(var(--background)));
+    --gradient-loom-flow: linear-gradient(90deg, hsl(var(--loom-blue) / 0.3), hsl(var(--loom-lavender) / 0.3));
     
     /* Shadows with warm tones */
     --shadow-sanctuary: 0 20px 40px -12px hsl(var(--primary) / 0.25);
