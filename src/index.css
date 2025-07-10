@@ -418,31 +418,31 @@ All colors MUST be HSL.
 /* Spark element animations */
 @keyframes electric-dance {
   0%, 100% { 
-    transform: scale(1) rotate(45deg);
-    filter: hue-rotate(0deg);
+    transform: scale(1) rotate(45deg) translateY(0px);
+    box-shadow: 0 0 20px hsl(45 100% 60% / 0.6);
   }
   25% { 
-    transform: scale(1.1) rotate(47deg);
-    filter: hue-rotate(10deg);
+    transform: scale(1.1) rotate(47deg) translateY(-2px);
+    box-shadow: 0 0 30px hsl(45 100% 60% / 0.8);
   }
   50% { 
-    transform: scale(0.95) rotate(45deg);
-    filter: hue-rotate(0deg);
+    transform: scale(0.95) rotate(45deg) translateY(0px);
+    box-shadow: 0 0 25px hsl(45 100% 60% / 0.7);
   }
   75% { 
-    transform: scale(1.05) rotate(43deg);
-    filter: hue-rotate(-10deg);
+    transform: scale(1.05) rotate(43deg) translateY(-1px);
+    box-shadow: 0 0 35px hsl(45 100% 60% / 0.9);
   }
 }
 
 @keyframes lightning-whisper {
   0%, 90%, 100% { 
     opacity: 0.7;
-    text-shadow: 0 0 10px hsl(var(--spark-glow) / 0.3);
+    box-shadow: 0 0 15px hsl(270 100% 75% / 0.4);
   }
   5%, 15% { 
     opacity: 1;
-    text-shadow: 0 0 20px hsl(var(--spark-glow) / 0.6);
+    box-shadow: 0 0 25px hsl(270 100% 75% / 0.7);
   }
 }
 

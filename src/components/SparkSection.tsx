@@ -25,37 +25,40 @@ const SparkSection = () => {
                 {/* Central Spark Finch */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   {/* Finch Body - Diamond/Bird Shape */}
-                  <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
+                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20">
                     {/* Main body - diamond shape */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-spark-lightning via-spark-electric to-spark-lightning transform rotate-45 animate-electric-dance glow-spark"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-violet-400 to-yellow-300 transform rotate-45 animate-electric-dance shadow-lg shadow-yellow-400/50 border-2 border-yellow-300/60"></div>
                     
                     {/* Wing trails */}
-                    <div className="absolute -left-2 top-1/2 w-4 h-1 bg-gradient-to-r from-spark-electric to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-80"></div>
-                    <div className="absolute -right-2 top-1/2 w-4 h-1 bg-gradient-to-l from-spark-electric to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-80" style={{animationDelay: '0.2s'}}></div>
+                    <div className="absolute -left-3 top-1/2 w-6 h-2 bg-gradient-to-r from-yellow-400 to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-90 rounded-full"></div>
+                    <div className="absolute -right-3 top-1/2 w-6 h-2 bg-gradient-to-l from-yellow-400 to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-90 rounded-full" style={{animationDelay: '0.2s'}}></div>
                     
                     {/* Spark trail */}
-                    <div className="absolute top-full left-1/2 w-0.5 h-6 bg-gradient-to-b from-spark-lightning to-transparent transform -translate-x-1/2 animate-electric-dance opacity-60"></div>
+                    <div className="absolute top-full left-1/2 w-1 h-8 bg-gradient-to-b from-yellow-300 to-transparent transform -translate-x-1/2 animate-electric-dance opacity-80 rounded-full"></div>
+                    
+                    {/* Inner glow */}
+                    <div className="absolute inset-2 bg-gradient-to-br from-white via-yellow-200 to-violet-200 transform rotate-45 animate-pulse opacity-60 rounded-sm"></div>
                   </div>
                 </div>
                 
                 {/* Electric rings */}
-                <div className="absolute inset-0 border-2 border-spark-electric/30 rounded-full animate-lightning-whisper"></div>
-                <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-spark-lightning/25 rounded-full animate-electric-dance" style={{animationDelay: '0.5s'}}></div>
-                <div className="absolute inset-8 sm:inset-12 md:inset-16 border border-spark-electric/15 rounded-full animate-lightning-whisper" style={{animationDelay: '1s'}}></div>
+                <div className="absolute inset-0 border-2 border-yellow-400/40 rounded-full animate-lightning-whisper shadow-lg shadow-yellow-400/20"></div>
+                <div className="absolute inset-4 sm:inset-6 md:inset-8 border-2 border-violet-400/30 rounded-full animate-electric-dance shadow-md shadow-violet-400/20" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute inset-8 sm:inset-12 md:inset-16 border border-yellow-300/25 rounded-full animate-lightning-whisper" style={{animationDelay: '1s'}}></div>
                 
                 {/* Flying spark particles */}
-                <div className="absolute top-1/4 left-3/4 w-1.5 h-1.5 bg-spark-electric transform rotate-45 animate-lightning-whisper"></div>
-                <div className="absolute bottom-1/4 right-3/4 w-1 h-1 bg-spark-lightning transform rotate-45 animate-electric-dance" style={{animationDelay: '0.7s'}}></div>
-                <div className="absolute top-3/4 left-1/4 w-0.5 h-0.5 bg-spark-electric transform rotate-45 animate-lightning-whisper" style={{animationDelay: '0.3s'}}></div>
+                <div className="absolute top-1/4 left-3/4 w-2 h-2 bg-yellow-400 transform rotate-45 animate-lightning-whisper shadow-lg shadow-yellow-400/60"></div>
+                <div className="absolute bottom-1/4 right-3/4 w-1.5 h-1.5 bg-violet-400 transform rotate-45 animate-electric-dance shadow-md shadow-violet-400/60" style={{animationDelay: '0.7s'}}></div>
+                <div className="absolute top-3/4 left-1/4 w-1 h-1 bg-yellow-300 transform rotate-45 animate-lightning-whisper shadow-sm shadow-yellow-300/60" style={{animationDelay: '0.3s'}}></div>
                 
                 {/* Additional spark trails */}
-                <div className="absolute top-1/3 right-1/3 w-3 h-0.5 bg-gradient-to-r from-transparent via-spark-lightning to-transparent animate-electric-dance opacity-50" style={{animationDelay: '0.4s'}}></div>
-                <div className="absolute bottom-1/3 left-1/3 w-2 h-0.5 bg-gradient-to-l from-transparent via-spark-electric to-transparent animate-lightning-whisper opacity-40" style={{animationDelay: '0.8s'}}></div>
+                <div className="absolute top-1/3 right-1/3 w-4 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-electric-dance opacity-70 rounded-full" style={{animationDelay: '0.4s'}}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-3 h-1 bg-gradient-to-l from-transparent via-violet-400 to-transparent animate-lightning-whisper opacity-60 rounded-full" style={{animationDelay: '0.8s'}}></div>
               </div>
             </div>
 
             {/* Spark Finch aura */}
-            <div className="absolute inset-0 bg-gradient-radial from-spark-electric/12 to-transparent rounded-full blur-2xl animate-pulse-sanctuary"></div>
+            <div className="absolute inset-0 bg-gradient-radial from-yellow-400/20 to-transparent rounded-full blur-2xl animate-pulse-sanctuary"></div>
           </div>
 
           {/* Spark Wisdom */}
