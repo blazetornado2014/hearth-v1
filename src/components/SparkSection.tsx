@@ -20,23 +20,41 @@ const SparkSection = () => {
           {/* Electric Visualization */}
           <div className="relative order-2 lg:order-1">
             <div className="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center">
-              {/* Lightning core */}
+              {/* Spark Finch - Electric Bird Visualization */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-spark rounded-full animate-electric-dance glow-spark"></div>
+                {/* Central Spark Finch */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  {/* Finch Body - Diamond/Bird Shape */}
+                  <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
+                    {/* Main body - diamond shape */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-spark-lightning via-spark-electric to-spark-lightning transform rotate-45 animate-electric-dance glow-spark"></div>
+                    
+                    {/* Wing trails */}
+                    <div className="absolute -left-2 top-1/2 w-4 h-1 bg-gradient-to-r from-spark-electric to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-80"></div>
+                    <div className="absolute -right-2 top-1/2 w-4 h-1 bg-gradient-to-l from-spark-electric to-transparent transform -translate-y-1/2 animate-lightning-whisper opacity-80" style={{animationDelay: '0.2s'}}></div>
+                    
+                    {/* Spark trail */}
+                    <div className="absolute top-full left-1/2 w-0.5 h-6 bg-gradient-to-b from-spark-lightning to-transparent transform -translate-x-1/2 animate-electric-dance opacity-60"></div>
+                  </div>
+                </div>
                 
                 {/* Electric rings */}
-                <div className="absolute inset-0 border-2 border-spark-electric/40 rounded-full animate-lightning-whisper"></div>
-                <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-spark-lightning/30 rounded-full animate-electric-dance" style={{animationDelay: '0.5s'}}></div>
-                <div className="absolute inset-8 sm:inset-12 md:inset-16 border border-spark-electric/20 rounded-full animate-lightning-whisper" style={{animationDelay: '1s'}}></div>
+                <div className="absolute inset-0 border-2 border-spark-electric/30 rounded-full animate-lightning-whisper"></div>
+                <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-spark-lightning/25 rounded-full animate-electric-dance" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute inset-8 sm:inset-12 md:inset-16 border border-spark-electric/15 rounded-full animate-lightning-whisper" style={{animationDelay: '1s'}}></div>
                 
-                {/* Lightning particles */}
-                <div className="absolute top-1/4 left-3/4 w-2 h-2 bg-spark-electric rounded-full animate-lightning-whisper"></div>
-                <div className="absolute bottom-1/4 right-3/4 w-1.5 h-1.5 bg-spark-lightning rounded-full animate-electric-dance" style={{animationDelay: '0.7s'}}></div>
-                <div className="absolute top-3/4 left-1/4 w-1 h-1 bg-spark-electric rounded-full animate-lightning-whisper" style={{animationDelay: '0.3s'}}></div>
+                {/* Flying spark particles */}
+                <div className="absolute top-1/4 left-3/4 w-1.5 h-1.5 bg-spark-electric transform rotate-45 animate-lightning-whisper"></div>
+                <div className="absolute bottom-1/4 right-3/4 w-1 h-1 bg-spark-lightning transform rotate-45 animate-electric-dance" style={{animationDelay: '0.7s'}}></div>
+                <div className="absolute top-3/4 left-1/4 w-0.5 h-0.5 bg-spark-electric transform rotate-45 animate-lightning-whisper" style={{animationDelay: '0.3s'}}></div>
+                
+                {/* Additional spark trails */}
+                <div className="absolute top-1/3 right-1/3 w-3 h-0.5 bg-gradient-to-r from-transparent via-spark-lightning to-transparent animate-electric-dance opacity-50" style={{animationDelay: '0.4s'}}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-2 h-0.5 bg-gradient-to-l from-transparent via-spark-electric to-transparent animate-lightning-whisper opacity-40" style={{animationDelay: '0.8s'}}></div>
               </div>
             </div>
 
-            {/* Electric aura */}
+            {/* Spark Finch aura */}
             <div className="absolute inset-0 bg-gradient-radial from-spark-electric/12 to-transparent rounded-full blur-2xl animate-pulse-sanctuary"></div>
           </div>
 
@@ -58,15 +76,15 @@ const SparkSection = () => {
 
             <div className="space-y-2 sm:space-y-3 mb-6 md:mb-8">
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-electric">
-                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gradient-spark rounded-full animate-electric-dance glow-spark"></div>
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gradient-spark rotate-45 animate-electric-dance glow-spark"></div>
                 <span className="text-xs sm:text-sm font-medium">Lightning-Fast Insights</span>
               </div>
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-lightning">
-                <div className="w-3 h-3 bg-gradient-spark rounded-full animate-lightning-whisper glow-spark" style={{animationDelay: '0.3s'}}></div>
+                <div className="w-3 h-3 bg-gradient-spark rotate-45 animate-lightning-whisper glow-spark" style={{animationDelay: '0.3s'}}></div>
                 <span className="text-sm font-medium">Pattern Recognition</span>
               </div>
               <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-spark-electric">
-                <div className="w-3 h-3 bg-gradient-spark rounded-full animate-electric-dance glow-spark" style={{animationDelay: '0.6s'}}></div>
+                <div className="w-3 h-3 bg-gradient-spark rotate-45 animate-electric-dance glow-spark" style={{animationDelay: '0.6s'}}></div>
                 <span className="text-sm font-medium">Gentle Revelations</span>
               </div>
             </div>

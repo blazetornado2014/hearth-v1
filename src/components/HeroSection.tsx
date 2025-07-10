@@ -29,7 +29,7 @@ const HeroSection = () => {
               <div className="absolute inset-4 border border-primary/20 rounded-full animate-float-sanctuary"></div>
               
               {/* Four elemental points */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-2 h-2 bg-spark-electric rounded-full animate-lightning-whisper"></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-2 h-2 bg-spark-electric rotate-45 animate-lightning-whisper"></div>
               <div className="absolute right-0 top-1/2 transform translate-x-1 -translate-y-1/2 w-2 h-2 bg-loom-mist rounded-full animate-mist-flow"></div>
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-2 h-2 bg-path-emerald rounded-full animate-starlight-twinkle"></div>
               <div className="absolute left-0 top-1/2 transform -translate-x-1 -translate-y-1/2 w-2 h-2 bg-forge-copper rounded-full animate-ember-glow"></div>
@@ -82,7 +82,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center items-center space-x-8 md:space-x-12">
             <div className="text-center group cursor-pointer">
-              <div className="w-3 h-3 bg-spark-electric rounded-full mx-auto mb-2 animate-lightning-whisper group-hover:scale-125 transition-transform glow-spark"></div>
+              <div className="w-3 h-3 bg-spark-electric transform rotate-45 mx-auto mb-2 animate-lightning-whisper group-hover:scale-125 transition-transform glow-spark"></div>
               <span className="text-xs text-muted-foreground group-hover:text-spark-electric transition-colors">Spark</span>
             </div>
             <div className="text-center group cursor-pointer">

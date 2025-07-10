@@ -39,7 +39,10 @@ const IntroSection = () => {
             <div className="relative mb-4">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-spark-electric to-spark-lightning rounded-2xl mx-auto animate-electric-dance group-hover:animate-lightning-whisper transition-elemental glow-spark relative overflow-hidden">
                 <div className="absolute inset-2 border border-white/20 rounded-xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-lightning-whisper"></div>
+                {/* Spark Finch mini representation */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rotate-45 animate-lightning-whisper"></div>
+                <div className="absolute top-1/2 left-1/3 w-1 h-0.5 bg-white/60 animate-electric-dance"></div>
+                <div className="absolute top-1/2 right-1/3 w-1 h-0.5 bg-white/60 animate-electric-dance" style={{animationDelay: '0.2s'}}></div>
               </div>
             </div>
             <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Spark</h3>
