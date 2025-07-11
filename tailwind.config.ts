@@ -62,6 +62,7 @@ export default {
 				/* Spark element colors */
 				spark: {
 					electric: 'hsl(var(--spark-electric))',
+					lightning: 'hsl(var(--spark-lightning))',
 					violet: 'hsl(var(--spark-violet))',
 					twilight: 'hsl(var(--spark-twilight))'
 				},
@@ -74,10 +75,8 @@ export default {
 				},
 				/* Path element colors */
 				path: {
-					green: 'hsl(var(--path-green))',
-					sage: 'hsl(var(--path-sage))',
-					sand: 'hsl(var(--path-sand))',
-					horizon: 'hsl(var(--path-horizon))'
+					emerald: 'hsl(var(--path-emerald))',
+					starlight: 'hsl(var(--path-starlight))'
 				},
 				/* Forge element colors */
 				forge: {
@@ -102,15 +101,15 @@ export default {
 				'gradient-twilight': 'var(--gradient-twilight)',
 				'gradient-earth': 'var(--gradient-earth)',
 				'gradient-spark': 'var(--gradient-spark)',
-				'gradient-spark-bg': 'var(--gradient-spark-bg)',
+				'gradient-spark-bg': 'var(--spark-bg)',
 				'gradient-loom': 'var(--gradient-loom)',
-				'gradient-loom-bg': 'var(--gradient-loom-bg)',
+				'gradient-loom-bg': 'var(--loom-bg)',
 				'gradient-loom-flow': 'var(--gradient-loom-flow)',
 				'gradient-path': 'var(--gradient-path)',
-				'gradient-path-bg': 'var(--gradient-path-bg)',
+				'gradient-path-bg': 'var(--path-bg)',
 				'gradient-path-horizon': 'var(--gradient-path-horizon)',
 				'gradient-forge': 'var(--gradient-forge)',
-				'gradient-forge-bg': 'var(--gradient-forge-bg)',
+				'gradient-forge-bg': 'var(--forge-bg)',
 				'gradient-forge-workshop': 'var(--gradient-forge-workshop)',
 				'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))'
 			},

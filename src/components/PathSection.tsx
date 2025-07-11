@@ -1,19 +1,6 @@
-import { Button } from "@/components/ui/button";
-
 const PathSection = () => {
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 bg-path-sanctuary overflow-hidden sanctuary-overlay" style={{'--element-glow': 'var(--path-glow)'} as React.CSSProperties}>
-      {/* Forest and starlight atmosphere */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 right-1/4 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-radial from-path-emerald/25 to-transparent rounded-full blur-3xl animate-forest-sway"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-24 h-24 md:w-36 md:h-36 lg:w-48 lg:h-48 bg-gradient-radial from-path-starlight/20 to-transparent rounded-full blur-2xl animate-starlight-twinkle"></div>
-        
-        {/* Starlight particles */}
-        <div className="absolute top-16 left-8 md:top-1/4 md:left-1/4 w-2 h-2 bg-path-emerald rounded-full animate-starlight-twinkle glow-path"></div>
-        <div className="absolute bottom-20 right-8 md:bottom-1/3 md:right-1/3 w-1.5 h-1.5 bg-path-starlight rounded-full animate-starlight-twinkle" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-path-emerald rounded-full animate-starlight-twinkle" style={{animationDelay: '1s'}}></div>
-      </div>
-
+    <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden sanctuary-overlay" style={{'--element-glow': 'var(--path-glow)'} as React.CSSProperties}>
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Path Visualization */}
@@ -21,7 +8,6 @@ const PathSection = () => {
             <div className="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center">
               {/* Compass core */}
               <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-gradient-path rounded-full animate-forest-sway glow-path"></div>
                 
                 {/* Starlight paths */}
                 <svg className="w-full h-full opacity-50" viewBox="0 0 320 320">
@@ -68,10 +54,9 @@ const PathSection = () => {
           </div>
 
           {/* Path Wisdom */}
-          <div className="text-left max-w-xl order-1 lg:order-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-4 md:mb-6 leading-tight">
-              <span className="text-path-emerald whisper-text">Meet</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-path font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-forest-sway">
+          <div className="text-left max-w-xl order-1 lg:order-2 relative z-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-6 md:mb-8 leading-tight">
+              <span className="block text-transparent bg-clip-text bg-gradient-path font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-forest-sway pb-2">
                 Path
               </span>
               <span className="block text-foreground">Your Gentle Navigator</span>
