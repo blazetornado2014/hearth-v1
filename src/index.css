@@ -44,55 +44,39 @@ All colors MUST be HSL.
     --sanctuary-depth: 240 25% 85%;
     --sanctuary-shadow: 240 30% 75%;
 
-    /* Spark Element - Violet lightning with golden highlights */
-    --spark-electric: 270 100% 75%; /* electric violet */
-    --spark-lightning: 45 100% 65%; /* lightning gold */
-    --spark-violet: 280 85% 80%; /* soft violet */
-    --spark-gold: 38 90% 70%; /* warm gold */
-    --spark-bright: 285 70% 85%; /* light violet */
-    --spark-twilight: 275 60% 60%; /* twilight purple */
-    --spark-bg: linear-gradient(135deg, hsl(285 30% 98%) 0%, hsl(270 40% 96%) 50%, hsl(280 25% 97%) 100%);
-    --spark-glow: 270 100% 75%;
+    /* Spark Element - Electric & Creative */
+    --spark-electric: 220 100% 50%; /* Electric Blue */
+    --spark-lightning: 60 100% 50%; /* Bright Yellow */
+    --spark-bg: linear-gradient(to right, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
+    --spark-glow: 60 100% 50%; /* Bright Yellow for glow */
     
-    /* Loom Element - Mist blue with ink purple depths */
-    --loom-mist: 220 60% 45%; /* darker for better contrast */
-    --loom-ink: 240 80% 35%; /* lighter for better readability */
-    --loom-blue: 210 70% 60%; /* flowing blue */
-    --loom-royal: 250 65% 45%; /* royal purple */
-    --loom-lavender: 260 50% 75%; /* soft lavender */
-    --loom-deep: 235 70% 35%; /* deep blue */
-    --loom-accent: 225 60% 65%; /* blue accent */
-    --loom-bg: linear-gradient(135deg, hsl(235 40% 15%) 0%, hsl(245 50% 18%) 50%, hsl(240 45% 20%) 100%);
-    --loom-glow: 220 60% 85%;
+    /* Loom Element - Wise & Contemplative */
+    --loom-blue: 220 60% 60%; /* Muted Blue */
+    --loom-lavender: 280 50% 70%; /* Soft Lavender */
+    --loom-mist: 270 50% 45%; /* A slightly richer, but still soft purple */
+    --loom-ink: 280 60% 80%; /* A softer, more balanced pinkish-purple */
+    --loom-bg: linear-gradient(to right, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
+    --loom-glow: 280 90% 80%; /* Brighter purple glow */
     
-    /* Path Element - Deep green with starlight silver */
-    --path-emerald: 150 70% 45%; /* deep emerald */
-    --path-forest: 140 60% 35%; /* forest depths */
-    --path-starlight: 200 30% 80%; /* starlight silver */
-    --path-green: 145 65% 40%; /* path green */
-    --path-sage: 135 45% 55%; /* sage wisdom */
-    --path-mint: 160 40% 70%; /* gentle mint */
-    --path-horizon: 170 35% 75%; /* distant horizon */
-    --path-bg: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(150 20% 98%) 50%, hsl(140 15% 96%) 100%);
-    --path-glow: 150 70% 45%;
+    /* Path Element - Natural & Serene */
+    --path-emerald: 120 80% 35%; /* Vibrant, Natural Green */
+    --path-starlight: 0 0% 100%; /* Bright White */
+    --path-bg: linear-gradient(to right, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
+    --path-glow: 120 80% 35%; /* Vibrant Green for glow */
     
-    /* Forge Element - Obsidian charcoal with molten copper */
-    --forge-obsidian: 220 40% 35%; /* even lighter for better contrast */
-    --forge-charcoal: 215 35% 40%; /* much lighter for readability */
-    --forge-copper: 25 85% 65%; /* molten copper */
-    --forge-ember: 15 90% 55%; /* glowing ember */
-    --forge-flame: 30 95% 60%; /* bright flame */
-    --forge-earth: 35 60% 45%; /* earth brown */
-    --forge-stone: 40 25% 65%; /* weathered stone */
-    --forge-bg: linear-gradient(135deg, hsl(220 40% 12%) 0%, hsl(215 45% 16%) 50%, hsl(210 35% 20%) 100%);
-    --forge-glow: 25 85% 65%;
+    /* Forge Element - Focused & Powerful */
+    --forge-obsidian: 240 10% 10%; /* Charcoal Black (unused, but keeping for consistency) */
+    --forge-charcoal: 240 10% 10%; /* Charcoal Black */
+    --forge-copper: 25 100% 50%; /* Lava Orange */
+    --forge-bg: linear-gradient(to right, hsl(var(--forge-charcoal)) 0%, hsl(var(--forge-copper)) 100%);
+    --forge-glow: 25 100% 50%; /* Lava Orange for glow */
 
     /* Atmospheric gradients */
     --gradient-sanctuary: linear-gradient(135deg, hsl(var(--sanctuary-mist)) 0%, hsl(var(--sanctuary-whisper)) 100%);
-    --gradient-spark: linear-gradient(135deg, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
-    --gradient-loom: linear-gradient(135deg, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
-    --gradient-path: linear-gradient(135deg, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
-    --gradient-forge: linear-gradient(135deg, hsl(var(--forge-copper)) 0%, hsl(var(--forge-obsidian)) 100%);
+    --gradient-spark: linear-gradient(to right, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
+    --gradient-loom: linear-gradient(to right, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
+    --gradient-path: linear-gradient(to right, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
+    --gradient-forge: linear-gradient(to right, hsl(var(--forge-charcoal)) 0%, hsl(var(--forge-copper)) 100%);
     
     /* Mystical shadows and glows */
     --shadow-sanctuary: 0 20px 60px -12px hsl(240 30% 75% / 0.15);
@@ -154,14 +138,10 @@ All colors MUST be HSL.
     --sanctuary-shadow: 240 35% 35%;
 
     /* Dark mode element adjustments */
-    --loom-mist: 220 60% 75%; /* lighter for dark mode */
-    --loom-ink: 240 80% 65%; /* much lighter for dark mode */
-    --forge-obsidian: 220 40% 80%; /* much lighter for dark mode */
-    --forge-charcoal: 215 35% 85%; /* much lighter for dark mode */
-    --spark-bg: linear-gradient(135deg, hsl(285 40% 8%) 0%, hsl(270 50% 12%) 50%, hsl(280 35% 10%) 100%);
-    --loom-bg: linear-gradient(135deg, hsl(235 50% 8%) 0%, hsl(245 60% 12%) 50%, hsl(240 55% 15%) 100%);
-    --path-bg: linear-gradient(135deg, hsl(240 30% 8%) 0%, hsl(150 30% 10%) 50%, hsl(140 25% 12%) 100%);
-    --forge-bg: linear-gradient(135deg, hsl(220 50% 8%) 0%, hsl(215 55% 12%) 50%, hsl(210 45% 15%) 100%);
+    --spark-bg: linear-gradient(135deg, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
+    --loom-bg: linear-gradient(135deg, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
+    --path-bg: linear-gradient(135deg, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
+    --forge-bg: linear-gradient(135deg, hsl(var(--forge-charcoal)) 0%, hsl(var(--forge-copper)) 100%);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -385,7 +365,7 @@ All colors MUST be HSL.
   }
   50% { 
     opacity: 0.8;
-    transform: scale(1.02);
+    transform: scale(1.1); /* Increased scale for more noticeable pulse */
   }
 }
 
@@ -477,6 +457,35 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counter-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes pulse-glow-loom {
+  0%, 100% {
+    box-shadow: 0 0 10px hsl(var(--loom-glow) / 0.2), 0 0 20px hsl(var(--loom-glow) / 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--loom-glow) / 0.4), 0 0 40px hsl(var(--loom-glow) / 0.2);
+  }
+}
+
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counter-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
 /* Path element animations */
 @keyframes starlight-twinkle {
   0%, 100% { 
@@ -525,6 +534,37 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes spark-burst {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+/* Orbital animations for Loom section */
+@keyframes orbit-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes orbit-fast {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Animation classes */
 .animate-float-sanctuary { animation: float-sanctuary 8s ease-in-out infinite; }
 .animate-shimmer-sanctuary { animation: shimmer-sanctuary 3s ease-in-out infinite; }
@@ -537,12 +577,16 @@ All colors MUST be HSL.
 
 .animate-mist-flow { animation: mist-flow 8s ease-in-out infinite; }
 .animate-ink-ripple { animation: ink-ripple 3s ease-out infinite; }
+.animate-rotate-clockwise { animation: rotate-clockwise 60s linear infinite; }
+.animate-rotate-counter-clockwise { animation: rotate-counter-clockwise 75s linear infinite; }
+.animate-pulse-glow-loom { animation: pulse-glow-loom 5s ease-in-out infinite; }
 
 .animate-starlight-twinkle { animation: starlight-twinkle 2s ease-in-out infinite; }
 .animate-forest-sway { animation: forest-sway 6s ease-in-out infinite; }
 
 .animate-ember-glow { animation: ember-glow 3s ease-in-out infinite; }
 .animate-molten-flow { animation: molten-flow 4s ease-in-out infinite; }
+.animate-spark-burst { animation: spark-burst 2s ease-out infinite; }
 
 /* Responsive sanctuary scaling */
 @media (max-width: 768px) {
@@ -601,8 +645,11 @@ All colors MUST be HSL.
   .animate-starlight-twinkle,
   .animate-forest-sway,
   .animate-ember-glow,
-  .animate-molten-flow {
-    animation-duration: 4s;
+  .animate-molten-flow,
+  .animate-rotate-clockwise,
+  .animate-rotate-counter-clockwise,
+  .animate-pulse-glow-loom {
+    animation-duration: 30s; /* Adjust for slower rotation on mobile */
   }
 }
 
@@ -666,6 +713,16 @@ All colors MUST be HSL.
   .animate-pulse-sanctuary,
   .animate-breathe-sanctuary,
   .animate-drift-sanctuary,
+  .animate-float-sanctuary,
+  .animate-shimmer-sanctuary,
+  .animate-pulse-sanctuary,
+  .animate-breathe-sanctuary,
+  .animate-drift-sanctuary,
+  .animate-float-sanctuary,
+  .animate-shimmer-sanctuary,
+  .animate-pulse-sanctuary,
+  .animate-breathe-sanctuary,
+  .animate-drift-sanctuary,
   .animate-electric-dance,
   .animate-lightning-whisper,
   .animate-mist-flow,
@@ -673,7 +730,10 @@ All colors MUST be HSL.
   .animate-starlight-twinkle,
   .animate-forest-sway,
   .animate-ember-glow,
-  .animate-molten-flow {
+  .animate-molten-flow,
+  .animate-rotate-clockwise,
+  .animate-rotate-counter-clockwise,
+  .animate-pulse-glow-loom {
     animation: none;
   }
   

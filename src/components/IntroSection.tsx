@@ -1,6 +1,6 @@
 const IntroSection = () => {
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-sanctuary-whisper overflow-hidden sanctuary-overlay">
+    <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden sanctuary-overlay animate-fade-in-up">
       {/* Sanctuary atmosphere */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-radial from-primary/12 to-transparent rounded-full blur-3xl animate-pulse-sanctuary"></div>
@@ -37,8 +37,8 @@ const IntroSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto mb-8 md:mb-12">
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="relative mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-spark-electric to-spark-lightning rounded-2xl mx-auto animate-electric-dance group-hover:animate-lightning-whisper transition-elemental glow-spark relative overflow-hidden">
-                <div className="absolute inset-2 border border-white/20 rounded-xl"></div>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-spark-electric to-spark-lightning rounded-full mx-auto animate-electric-dance group-hover:animate-lightning-whisper transition-elemental glow-spark relative overflow-hidden">
+                <div className="absolute inset-2 border border-white/20 rounded-full"></div>
                 {/* Spark Finch mini representation */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rotate-45 animate-lightning-whisper"></div>
                 <div className="absolute top-1/2 left-1/3 w-1 h-0.5 bg-white/60 animate-electric-dance"></div>
@@ -51,8 +51,8 @@ const IntroSection = () => {
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="relative mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-loom-mist to-loom-ink rounded-2xl mx-auto animate-mist-flow group-hover:animate-ink-ripple transition-elemental glow-loom relative overflow-hidden" style={{animationDelay: '0.3s'}}>
-                <div className="absolute inset-2 border border-white/20 rounded-xl"></div>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-loom-mist to-loom-ink rounded-full mx-auto animate-mist-flow group-hover:animate-ink-ripple transition-elemental glow-loom relative overflow-hidden" style={{animationDelay: '0.3s'}}>
+                <div className="absolute inset-2 border border-white/20 rounded-full"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-mist-flow"></div>
               </div>
             </div>
@@ -62,8 +62,8 @@ const IntroSection = () => {
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="relative mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-path-emerald to-path-starlight rounded-2xl mx-auto animate-forest-sway group-hover:animate-starlight-twinkle transition-elemental glow-path relative overflow-hidden" style={{animationDelay: '0.6s'}}>
-                <div className="absolute inset-2 border border-white/20 rounded-xl"></div>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-path-emerald to-path-starlight rounded-full mx-auto animate-forest-sway group-hover:animate-starlight-twinkle transition-elemental glow-path relative overflow-hidden" style={{animationDelay: '0.6s'}}>
+                <div className="absolute inset-2 border border-white/20 rounded-full"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-starlight-twinkle"></div>
               </div>
             </div>
@@ -73,8 +73,8 @@ const IntroSection = () => {
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="relative mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-forge-copper to-forge-obsidian rounded-2xl mx-auto animate-ember-glow group-hover:animate-molten-flow transition-elemental glow-forge relative overflow-hidden" style={{animationDelay: '0.9s'}}>
-                <div className="absolute inset-2 border border-white/20 rounded-xl"></div>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-forge-charcoal to-forge-copper rounded-full mx-auto animate-ember-glow group-hover:animate-molten-flow transition-elemental glow-forge relative overflow-hidden" style={{animationDelay: '0.9s'}}>
+                <div className="absolute inset-2 border border-white/20 rounded-full"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-ember-glow"></div>
               </div>
             </div>

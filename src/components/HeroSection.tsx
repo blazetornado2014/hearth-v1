@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden sanctuary-overlay">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden sanctuary-overlay animate-fade-in-up">
       {/* Mystical atmosphere */}
       <div className="absolute inset-0 z-0 opacity-40">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-radial from-primary/20 to-transparent rounded-full blur-3xl animate-pulse-sanctuary"></div>
@@ -75,38 +75,7 @@ const HeroSection = () => {
           </blockquote>
         </div>
 
-        {/* Elemental Preview */}
-        <div className="mb-8 md:mb-12">
-          <p className="text-sm text-muted-foreground mb-6 tracking-wide">
-            Start Your Journey
-          </p>
-          <div className="flex justify-center items-center space-x-8 md:space-x-12">
-            <div className="text-center group cursor-pointer">
-              <div className="w-3 h-3 bg-spark-electric transform rotate-45 mx-auto mb-2 animate-lightning-whisper group-hover:scale-125 transition-transform glow-spark"></div>
-              <span className="text-xs text-muted-foreground group-hover:text-spark-electric transition-colors">Spark</span>
-            </div>
-            <div className="text-center group cursor-pointer">
-              <div className="w-3 h-3 bg-loom-mist rounded-full mx-auto mb-2 animate-mist-flow group-hover:scale-125 transition-transform glow-loom"></div>
-              <span className="text-xs text-muted-foreground group-hover:text-loom-mist transition-colors">Loom</span>
-            </div>
-            <div className="text-center group cursor-pointer">
-              <div className="w-3 h-3 bg-path-emerald rounded-full mx-auto mb-2 animate-starlight-twinkle group-hover:scale-125 transition-transform glow-path"></div>
-              <span className="text-xs text-muted-foreground group-hover:text-path-emerald transition-colors">Path</span>
-            </div>
-            <div className="text-center group cursor-pointer">
-              <div className="w-3 h-3 bg-forge-copper rounded-full mx-auto mb-2 animate-ember-glow group-hover:scale-125 transition-transform glow-forge"></div>
-              <span className="text-xs text-muted-foreground group-hover:text-forge-copper transition-colors">Forge</span>
-            </div>
-          </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center space-y-2 animate-bounce">
-            <span className="text-xs text-muted-foreground tracking-wide">Explore</span>
-            <div className="w-0.5 h-8 bg-gradient-to-b from-primary to-transparent"></div>
-          </div>
-        </div>
       </div>
     </section>
   );
