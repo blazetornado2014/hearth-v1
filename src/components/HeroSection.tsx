@@ -1,6 +1,80 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { useToast } from "@/components/ui/use-toast";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { supabase } from "@/integrations/supabase/client";
+
+const formSchema = z.object({
+  email: z.string().email({ message: "Invalid email address." }),
+});
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const [showSanctuaryButton, setShowSanctuaryButton] = useState(() => {
+    // Initialize state from localStorage
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('hasJoinedWaitlist') === 'true';
+    }
+    return false;
+  });
+  const { toast } = useToast();
+
+  useEffect(() => {
+    // Update localStorage when showSanctuaryButton changes
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('hasJoinedWaitlist', String(showSanctuaryButton));
+    }
+  }, [showSanctuaryButton]);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const { data, error } = await supabase
+      .from("waitlist")
+      .insert([{ email: values.email }]);
+
+    if (error) {
+      console.error("Error inserting email:", error);
+      // Check for unique constraint violation error code (e.g., '23505' for PostgreSQL)
+      if (error.code === '23505') {
+        toast({
+          title: "Success",
+          description: "You're already on the waitlist!",
+        });
+        setShowSanctuaryButton(true);
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to join waitlist. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } else {
+      toast({
+        title: "Success",
+        description: "You've joined the waitlist!",
+      });
+      setShowSanctuaryButton(true);
+    }
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden sanctuary-overlay animate-fade-in-up">
       {/* Mystical atmosphere */}
@@ -57,16 +131,54 @@ const HeroSection = () => {
           Four gentle digital companions that guide your journey to emotional clarity and purposeful action
         </p>
 
+        {/* Join Waitlist Form */}
+        {!showSanctuaryButton && (
+          <div className="mb-12 md:mb-16 max-w-md mx-auto">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="sr-only">Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your email to join waitlist"
+                          {...field}
+                          className="h-12 text-lg px-4 rounded-xl bg-background/50 border-primary/30 focus-visible:ring-primary"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-left" />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 w-full relative overflow-hidden group"
+                >
+                  <span className="relative z-10">Join Waitlist</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </Button>
+              </form>
+            </Form>
+          </div>
+        )}
+
         {/* Sanctuary Portal */}
-        <div className="mb-12 md:mb-16">
-          <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 glow-spark w-full sm:w-auto max-w-xs sm:max-w-none relative overflow-hidden group"
-          >
-            <span className="relative z-10">Enter Your Sanctuary</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-          </Button>
-        </div>
+        {showSanctuaryButton && (
+          <div className="mb-12 md:mb-16 animate-fade-in-scale">
+            <Button 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 glow-spark w-full sm:w-auto max-w-xs sm:max-w-none relative overflow-hidden group"
+              onClick={() => navigate('/elements')}
+            >
+              <span className="relative z-10">Enter Your Sanctuary</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </Button>
+          </div>
+        )}
 
         {/* Brand Promise */}
         <div className="mb-8 md:mb-12">

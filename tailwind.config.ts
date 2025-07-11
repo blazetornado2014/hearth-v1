@@ -297,6 +297,16 @@ export default {
 					'50%': {
 						boxShadow: '0 0 20px hsl(var(--forge-copper) / 0.6)'
 					}
+				},
+				'fade-in-scale': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
@@ -315,7 +325,8 @@ export default {
 				'path-emerge': 'path-emerge 3s ease-out',
 				'forge-build': 'forge-build 0.8s ease-out',
 				'tool-rhythm': 'tool-rhythm 3s ease-in-out infinite',
-				'radiant-glow': 'radiant-glow 2s ease-in-out infinite'
+				'radiant-glow': 'radiant-glow 2s ease-in-out infinite',
+				'fade-in-scale': 'fade-in-scale 0.5s ease-out forwards'
 			}
 		}
 	},
