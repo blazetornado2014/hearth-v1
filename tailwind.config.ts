@@ -307,6 +307,17 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				/* Flame animations */
+				'spark': {
+					'0%': {
+						transform: 'translateY(0) scale(0)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(-50px) scale(1)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -326,7 +337,8 @@ export default {
 				'forge-build': 'forge-build 0.8s ease-out',
 				'tool-rhythm': 'tool-rhythm 3s ease-in-out infinite',
 				'radiant-glow': 'radiant-glow 2s ease-in-out infinite',
-				'fade-in-scale': 'fade-in-scale 0.5s ease-out forwards'
+				'fade-in-scale': 'fade-in-scale 0.5s ease-out forwards',
+				'spark': 'spark 1.5s ease-out infinite'
 			}
 		}
 	},

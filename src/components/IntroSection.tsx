@@ -12,7 +12,7 @@ const IntroSection = () => {
         <div className="absolute top-2/3 right-1/2 w-0.5 h-0.5 bg-accent rounded-full animate-starlight-twinkle opacity-80" style={{animationDelay: '1.5s'}}></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
         {/* Section Identity */}
         <div className="mb-8 md:mb-12">
           <div className="flex items-center justify-center mb-4">
@@ -28,27 +28,13 @@ const IntroSection = () => {
         </div>
 
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-          Four ancient elements, reimagined as gentle guides for your digital life. 
+          Three ancient elements, reimagined as gentle guides for your digital life. 
           Each companion offers a unique approach to processing thoughts, emotions, and decisions — 
           creating a complete system for personal growth without judgment or pressure.
         </p>
 
         {/* Elemental Companions */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto mb-8 md:mb-12">
-          <div className="text-center group transition-elemental hover:transform hover:scale-105">
-            <div className="relative mb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-spark-electric to-spark-lightning rounded-full mx-auto animate-electric-dance group-hover:animate-lightning-whisper transition-elemental glow-spark relative overflow-hidden">
-                <div className="absolute inset-2 border border-white/20 rounded-full"></div>
-                {/* Spark Finch mini representation */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rotate-45 animate-lightning-whisper"></div>
-                <div className="absolute top-1/2 left-1/3 w-1 h-0.5 bg-white/60 animate-electric-dance"></div>
-                <div className="absolute top-1/2 right-1/3 w-1 h-0.5 bg-white/60 animate-electric-dance" style={{animationDelay: '0.2s'}}></div>
-              </div>
-            </div>
-            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Spark</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Electric Insight & Clarity</p>
-          </div>
-          
+        <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto mb-8 md:mb-12">
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
             <div className="relative mb-4">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-loom-mist to-loom-ink rounded-full mx-auto animate-mist-flow group-hover:animate-ink-ripple transition-elemental glow-loom relative overflow-hidden" style={{animationDelay: '0.3s'}}>
