@@ -29,13 +29,30 @@ serve(async (req) => {
 
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-06-17' });
 
-    // We will use the last message as the prompt for this simple example
-    const lastMessage = messages[messages.length - 1];
-    const prompt = lastMessage.text;
+    // Transform messages for Gemini API history format
+    const history = messages.map((msg: { text: string; sender: 'user' | 'ai' }) => ({
+      role: msg.sender === 'user' ? 'user' : 'model',
+      parts: [{ text: msg.text }],
+    }));
 
-    const result = await model.generateContent(prompt);
+    // Start a chat session with the history
+    const chat = model.startChat({
+      history: history,
+      // You can add system instructions here if needed, e.g.:
+      // systemInstruction: {
+      //   role: "system",
+      //   parts: [{ text: "You are a helpful assistant." }],
+      // },
+    });
+
+    // Send the last message as the current prompt in the chat session
+    const lastMessageText = messages[messages.length - 1].text;
+    console.log('Prompt sent to Gemini:', lastMessageText);
+
+    const result = await chat.sendMessage(lastMessageText);
     const response = await result.response;
     const text = response.text();
+    console.log('Response text from Gemini:', text);
 
     return new Response(JSON.stringify({ reply: text }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },

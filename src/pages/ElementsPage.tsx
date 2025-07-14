@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Flame from "@/components/Flame";
-import { supabase } from '@/integrations/supabase/client'; // Assuming you have this client initialized
+import { supabase } from '@/integrations/supabase/client';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 // Define the message type
 interface Message {
@@ -64,7 +66,11 @@ const ElementsPage = () => {
                   : 'bg-muted self-start'
               }`}
             >
-              <p className="text-sm">{message.text}</p>
+              <div className="text-sm prose dark:prose-invert">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {message.text}
+                </ReactMarkdown>
+              </div>
             </div>
           ))}
           {isLoading && (
