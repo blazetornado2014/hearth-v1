@@ -1,56 +1,13 @@
+import pathIcon from "@/assets/path-icon-transparent.png";
+
 const PathSection = () => {
   return (
     <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden sanctuary-overlay" style={{'--element-glow': 'var(--path-glow)'} as React.CSSProperties}>
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Path Visualization */}
-          <div className="relative order-2 lg:order-1">
-            <div className="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center">
-              {/* Compass core */}
-              <div className="absolute inset-0">
-                
-                {/* Starlight paths */}
-                <svg className="w-full h-full opacity-50" viewBox="0 0 320 320">
-                  <path
-                    d="M80 240 Q160 160 240 80"
-                    stroke="hsl(var(--path-emerald) / 0.6)"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeDasharray="8,6"
-                    className="animate-starlight-twinkle"
-                  />
-                  <path
-                    d="M100 160 L220 160"
-                    stroke="hsl(var(--path-starlight) / 0.4)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-forest-sway"
-                    style={{animationDelay: '0.5s'}}
-                  />
-                  <path
-                    d="M160 100 L160 220"
-                    stroke="hsl(var(--path-emerald) / 0.3)"
-                    strokeWidth="1.5"
-                    fill="none"
-                    strokeDasharray="4,3"
-                    className="animate-starlight-twinkle"
-                    style={{animationDelay: '1s'}}
-                  />
-                </svg>
-                
-                {/* Starlight guides */}
-                <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-path-emerald rounded-full animate-starlight-twinkle"></div>
-                <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-path-starlight rounded-full animate-forest-sway" style={{animationDelay: '0.3s'}}></div>
-                <div className="absolute top-2/3 right-1/2 w-1 h-1 bg-path-emerald rounded-full animate-starlight-twinkle" style={{animationDelay: '0.7s'}}></div>
-                
-                {/* Compass rings */}
-                <div className="absolute inset-0 border border-path-emerald/20 rounded-full animate-forest-sway"></div>
-                <div className="absolute inset-6 sm:inset-8 md:inset-12 border border-path-starlight/15 rounded-full animate-starlight-twinkle" style={{animationDelay: '0.5s'}}></div>
-              </div>
-            </div>
-            
-            {/* Forest aura */}
-            <div className="absolute inset-0 bg-gradient-radial from-path-emerald/12 to-transparent rounded-full blur-2xl animate-breathe-sanctuary"></div>
+          <div className="relative order-2 lg:order-1 flex items-center justify-center">
+            <img src={pathIcon} alt="Path Icon" className="w-72 h-72 sm:w-[36rem] sm:h-[36rem] md:w-[39rem] md:h-[39rem] object-contain" />
           </div>
 
           {/* Path Wisdom */}

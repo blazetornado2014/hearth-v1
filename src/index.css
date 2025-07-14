@@ -39,6 +39,7 @@ All colors MUST be HSL.
     --ring: 25 80% 55%;
 
     /* Sanctuary atmosphere */
+    --sanctuary-glow: 25 80% 95%; /* Light and warm color for elements page */
     --sanctuary-mist: 240 20% 98%;
     --sanctuary-whisper: 240 15% 65%; /* Improved contrast for readability */
     --sanctuary-depth: 240 25% 85%;

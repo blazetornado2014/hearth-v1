@@ -89,7 +89,7 @@ const HeroSection = () => {
       </div>
 
       {/* Sanctuary Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
         {/* Hearth Brand Identity */}
         <div className="mb-8 md:mb-12">
           {/* Brand Symbol */}

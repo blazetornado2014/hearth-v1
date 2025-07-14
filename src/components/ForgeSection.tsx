@@ -1,43 +1,15 @@
 import { Button } from "@/components/ui/button";
+import forgeIcon from "@/assets/forge-icon-transparent.png";
+import { Link } from "react-router-dom";
 
 const ForgeSection = () => {
   return (
     <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden sanctuary-overlay" style={{'--element-glow': 'var(--forge-glow)'} as React.CSSProperties}>
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Forge Visualization */}
-          <div className="relative">
-            <div className="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center">
-              {/* Molten core */}
-              <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-forge-charcoal rounded-sm animate-ember-glow glow-forge"></div>
-                
-                {/* Obsidian matrix */}
-                <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-1.5 sm:gap-2 md:gap-3 p-4 sm:p-6 md:p-8 opacity-40">
-                  <div className="bg-forge-charcoal/45 rounded-sm animate-ember-glow" style={{animationDelay: '0.1s'}}></div>
-                  <div className="bg-forge-charcoal/35 rounded-sm animate-molten-flow" style={{animationDelay: '0.2s'}}></div>
-                  <div className="bg-forge-charcoal/40 rounded-sm animate-ember-glow" style={{animationDelay: '0.3s'}}></div>
-                  <div className="bg-forge-charcoal/30 rounded-sm animate-molten-flow" style={{animationDelay: '0.4s'}}></div>
-                  <div className="bg-forge-charcoal/25 rounded-sm animate-ember-glow" style={{animationDelay: '0.5s'}}></div>
-                  <div className="bg-forge-charcoal/35 rounded-sm animate-molten-flow" style={{animationDelay: '0.6s'}}></div>
-                  <div className="bg-forge-charcoal/30 rounded-sm animate-ember-glow" style={{animationDelay: '0.7s'}}></div>
-                  <div className="bg-forge-charcoal/40 rounded-sm animate-molten-flow" style={{animationDelay: '0.8s'}}></div>
-                  <div className="bg-forge-charcoal/35 rounded-sm animate-ember-glow" style={{animationDelay: '0.9s'}}></div>
-                </div>
-                
-                {/* Molten sparks */}
-                <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-forge-charcoal rounded-full animate-ember-glow"></div>
-                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-forge-charcoal rounded-full animate-molten-flow" style={{animationDelay: '0.3s'}}></div>
-                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-forge-charcoal rounded-full animate-ember-glow" style={{animationDelay: '0.6s'}}></div>
-                
-                {/* Forge borders */}
-                <div className="absolute inset-0 border-2 border-forge-charcoal/20 rounded-lg animate-ember-glow"></div>
-                <div className="absolute inset-3 sm:inset-4 md:inset-6 border border-forge-charcoal/15 rounded-lg animate-molten-flow" style={{animationDelay: '0.5s'}}></div>
-              </div>
-            </div>
-            
-            {/* Forge aura */}
-            <div className="absolute inset-0 bg-gradient-radial from-forge-charcoal/15 to-transparent rounded-lg blur-2xl animate-breathe-sanctuary"></div>
+          <div className="relative flex items-center justify-center">
+            <img src={forgeIcon} alt="Forge Icon" className="w-72 h-72 sm:w-[36rem] sm:h-[36rem] md:w-[39rem] md:h-[39rem] object-contain" />
           </div>
 
           {/* Forge Wisdom */}
@@ -74,12 +46,14 @@ const ForgeSection = () => {
               <blockquote className="text-xs sm:text-sm text-black/90 mb-4 sm:mb-6 border-none p-0 m-0 italic">
                 "In the forge of creation, vision becomes reality"
               </blockquote>
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 glow-forge w-full sm:w-auto"
-              >
-                Begin Your Journey
-              </Button>
+              <Link to="/elements">
+                <Button 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 glow-forge w-full sm:w-auto"
+                >
+                  Begin Your Journey
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
