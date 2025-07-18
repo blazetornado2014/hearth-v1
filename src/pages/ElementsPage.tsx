@@ -6,7 +6,7 @@ import { supabase } from '@/integrations/supabase/client';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-// Define the message type
+// Define message type
 interface Message {
   text: string;
   sender: 'user' | 'ai';
