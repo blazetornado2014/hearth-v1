@@ -29,15 +29,28 @@ serve(async (req) => {
 
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-06-17' });
 
-    // Transform messages for Gemini API history format
-    const history = messages.map((msg: { text: string; sender: 'user' | 'ai' }) => ({
-      role: msg.sender === 'user' ? 'user' : 'model',
-      parts: [{ text: msg.text }],
-    }));
+    // Determine the actual conversation history to send to startChat
+    // Exclude the initial AI greeting if it's the first message, and exclude the current user message
+    let conversationHistory: { role: 'user' | 'model'; parts: { text: string }[] }[] = [];
+    const lastMessageIndex = messages.length - 1;
+
+    // If there's more than just the initial AI greeting, or if the first message is from user
+    if (messages.length > 1 || messages[0].sender === 'user') {
+      // Start from index 0 if first message is user, else start from index 1 (skipping initial AI greeting)
+      const startIndex = messages[0].sender === 'user' ? 0 : 1;
+      
+      // Slice to get all messages except the last one (current user prompt)
+      const historyToProcess = messages.slice(startIndex, lastMessageIndex);
+
+      conversationHistory = historyToProcess.map((msg: { text: string; sender: 'user' | 'ai' }) => ({
+        role: msg.sender === 'user' ? 'user' : 'model',
+        parts: [{ text: msg.text }],
+      }));
+    }
 
     // Start a chat session with the history
     const chat = model.startChat({
-      history: history,
+      history: conversationHistory,
       // You can add system instructions here if needed, e.g.:
       // systemInstruction: {
       //   role: "system",
@@ -46,7 +59,7 @@ serve(async (req) => {
     });
 
     // Send the last message as the current prompt in the chat session
-    const lastMessageText = messages[messages.length - 1].text;
+    const lastMessageText = messages[lastMessageIndex].text;
     console.log('Prompt sent to Gemini:', lastMessageText);
 
     const result = await chat.sendMessage(lastMessageText);
