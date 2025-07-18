@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -273,7 +283,6 @@ All colors MUST be HSL.
   }
 
   /* Elemental glows */
-
   .glow-loom {
     box-shadow: 0 0 30px hsl(var(--loom-glow) / 0.3);
   }
@@ -333,7 +342,6 @@ All colors MUST be HSL.
   }
   
   /* Mobile-specific spacing adjustments */
-  .bg-spark-sanctuary,
   .bg-loom-sanctuary,
   .bg-path-sanctuary,
   .bg-forge-sanctuary {
@@ -342,7 +350,6 @@ All colors MUST be HSL.
   }
   
   /* Reduce glow effects on mobile for performance */
-  .glow-spark,
   .glow-loom,
   .glow-path,
   .glow-forge {
