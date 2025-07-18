@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Flame from "@/components/Flame";
@@ -13,11 +13,18 @@ interface Message {
 }
 
 const ElementsPage = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    { text: "Hello! I am Hearth, an AI assistant. How can I help you today?", sender: 'ai' }
-  ]);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    // Load messages from LocalStorage on initial render
+    const savedMessages = localStorage.getItem('chatMessages');
+    return savedMessages ? JSON.parse(savedMessages) : [{ text: "Hello! I am Hearth, an AI assistant. How can I help you today?", sender: 'ai' }];
+  });
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  // Save messages to LocalStorage whenever the messages state changes
+  useEffect(() => {
+    localStorage.setItem('chatMessages', JSON.stringify(messages));
+  }, [messages]);
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
