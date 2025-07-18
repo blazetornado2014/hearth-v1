@@ -102,8 +102,7 @@ const HeroSection = () => {
               <div className="absolute inset-2 border-2 border-primary/30 rounded-full animate-breathe-sanctuary"></div>
               <div className="absolute inset-4 border border-primary/20 rounded-full animate-float-sanctuary"></div>
               
-              {/* Four elemental points */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-2 h-2 bg-spark-electric rotate-45 animate-lightning-whisper"></div>
+              {/* Three elemental points */}
               <div className="absolute right-0 top-1/2 transform translate-x-1 -translate-y-1/2 w-2 h-2 bg-loom-mist rounded-full animate-mist-flow"></div>
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-2 h-2 bg-path-emerald rounded-full animate-starlight-twinkle"></div>
               <div className="absolute left-0 top-1/2 transform -translate-x-1 -translate-y-1/2 w-2 h-2 bg-forge-copper rounded-full animate-ember-glow"></div>
@@ -128,7 +127,7 @@ const HeroSection = () => {
 
         {/* Whispered Guidance */}
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-          Four gentle digital companions that guide your journey to emotional clarity and purposeful action
+          Three gentle digital companions that guide your journey to emotional clarity and purposeful action
         </p>
 
         {/* Join Waitlist Form */}

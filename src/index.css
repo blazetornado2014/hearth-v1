@@ -44,12 +44,6 @@ All colors MUST be HSL.
     --sanctuary-whisper: 240 15% 65%; /* Improved contrast for readability */
     --sanctuary-depth: 240 25% 85%;
     --sanctuary-shadow: 240 30% 75%;
-
-    /* Spark Element - Electric & Creative */
-    --spark-electric: 220 100% 50%; /* Electric Blue */
-    --spark-lightning: 60 100% 50%; /* Bright Yellow */
-    --spark-bg: linear-gradient(to right, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
-    --spark-glow: 60 100% 50%; /* Bright Yellow for glow */
     
     /* Loom Element - Wise & Contemplative */
     --loom-blue: 220 60% 60%; /* Muted Blue */
@@ -139,7 +133,6 @@ All colors MUST be HSL.
     --sanctuary-shadow: 240 35% 35%;
 
     /* Dark mode element adjustments */
-    --spark-bg: linear-gradient(135deg, hsl(var(--spark-electric)) 0%, hsl(var(--spark-lightning)) 100%);
     --loom-bg: linear-gradient(135deg, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
     --path-bg: linear-gradient(135deg, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
     --forge-bg: linear-gradient(135deg, hsl(var(--forge-charcoal)) 0%, hsl(var(--forge-copper)) 100%);
@@ -237,11 +230,6 @@ All colors MUST be HSL.
   }
 
   /* Elemental section backgrounds */
-  .bg-spark-sanctuary {
-    background: var(--spark-bg);
-    position: relative;
-    overflow: hidden;
-  }
 
   .bg-loom-sanctuary {
     background: var(--loom-bg);
@@ -284,20 +272,7 @@ All colors MUST be HSL.
     letter-spacing: 0.02em;
   }
 
-  /* Floating elements */
-  .float-sanctuary {
-    animation: float-sanctuary 8s ease-in-out infinite;
-  }
-
-  .float-delayed {
-    animation: float-sanctuary 8s ease-in-out infinite;
-    animation-delay: -2s;
-  }
-
   /* Elemental glows */
-  .glow-spark {
-    box-shadow: 0 0 30px hsl(var(--spark-glow) / 0.3);
-  }
 
   .glow-loom {
     box-shadow: 0 0 30px hsl(var(--loom-glow) / 0.3);
@@ -324,270 +299,6 @@ All colors MUST be HSL.
     transition: var(--transition-elemental);
   }
 }
-
-/* Mystical animations */
-@keyframes float-sanctuary {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.6;
-  }
-  25% { 
-    transform: translateY(-8px) rotate(0.5deg);
-    opacity: 0.8;
-  }
-  50% { 
-    transform: translateY(-12px) rotate(0deg);
-    opacity: 1;
-  }
-  75% { 
-    transform: translateY(-8px) rotate(-0.5deg);
-    opacity: 0.8;
-  }
-}
-
-@keyframes shimmer-sanctuary {
-  0% { 
-    background-position: -200% 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% { 
-    background-position: 200% 0;
-    opacity: 0;
-  }
-}
-
-@keyframes pulse-sanctuary {
-  0%, 100% { 
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% { 
-    opacity: 0.8;
-    transform: scale(1.1); /* Increased scale for more noticeable pulse */
-  }
-}
-
-@keyframes breathe-sanctuary {
-  0%, 100% { 
-    transform: scale(1);
-    opacity: 0.6;
-  }
-  50% { 
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-}
-
-@keyframes drift-sanctuary {
-  0% { 
-    transform: translateX(-20px) translateY(-10px);
-    opacity: 0.3;
-  }
-  50% { 
-    transform: translateX(20px) translateY(10px);
-    opacity: 0.7;
-  }
-  100% { 
-    transform: translateX(-20px) translateY(-10px);
-    opacity: 0.3;
-  }
-}
-
-/* Spark element animations */
-@keyframes electric-dance {
-  0%, 100% { 
-    transform: scale(1) rotate(45deg) translateY(0px);
-    box-shadow: 0 0 20px hsl(45 100% 60% / 0.6);
-  }
-  25% { 
-    transform: scale(1.1) rotate(47deg) translateY(-2px);
-    box-shadow: 0 0 30px hsl(45 100% 60% / 0.8);
-  }
-  50% { 
-    transform: scale(0.95) rotate(45deg) translateY(0px);
-    box-shadow: 0 0 25px hsl(45 100% 60% / 0.7);
-  }
-  75% { 
-    transform: scale(1.05) rotate(43deg) translateY(-1px);
-    box-shadow: 0 0 35px hsl(45 100% 60% / 0.9);
-  }
-}
-
-@keyframes lightning-whisper {
-  0%, 90%, 100% { 
-    opacity: 0.7;
-    box-shadow: 0 0 15px hsl(270 100% 75% / 0.4);
-  }
-  5%, 15% { 
-    opacity: 1;
-    box-shadow: 0 0 25px hsl(270 100% 75% / 0.7);
-  }
-}
-
-/* Loom element animations */
-@keyframes mist-flow {
-  0% { 
-    transform: translateX(-100px) scale(0.8);
-    opacity: 0;
-  }
-  50% { 
-    opacity: 0.6;
-    transform: translateX(0px) scale(1);
-  }
-  100% { 
-    transform: translateX(100px) scale(0.8);
-    opacity: 0;
-  }
-}
-
-@keyframes ink-ripple {
-  0% { 
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% { 
-    transform: scale(1.2);
-    opacity: 0.4;
-  }
-  100% { 
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
-@keyframes rotate-clockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rotate-counter-clockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
-@keyframes pulse-glow-loom {
-  0%, 100% {
-    box-shadow: 0 0 10px hsl(var(--loom-glow) / 0.2), 0 0 20px hsl(var(--loom-glow) / 0.1);
-  }
-  50% {
-    box-shadow: 0 0 20px hsl(var(--loom-glow) / 0.4), 0 0 40px hsl(var(--loom-glow) / 0.2);
-  }
-}
-
-@keyframes rotate-clockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rotate-counter-clockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
-/* Path element animations */
-@keyframes starlight-twinkle {
-  0%, 100% { 
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% { 
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-@keyframes forest-sway {
-  0%, 100% { 
-    transform: translateX(0px) rotate(0deg);
-  }
-  25% { 
-    transform: translateX(2px) rotate(0.5deg);
-  }
-  75% { 
-    transform: translateX(-2px) rotate(-0.5deg);
-  }
-}
-
-/* Forge element animations */
-@keyframes ember-glow {
-  0%, 100% { 
-    box-shadow: 0 0 20px hsl(var(--forge-glow) / 0.3);
-    transform: scale(1);
-  }
-  50% { 
-    box-shadow: 0 0 40px hsl(var(--forge-glow) / 0.6);
-    transform: scale(1.05);
-  }
-}
-
-@keyframes molten-flow {
-  0% { 
-    background-position: 0% 50%;
-  }
-  50% { 
-    background-position: 100% 50%;
-  }
-  100% { 
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes spark-burst {
-  0% {
-    transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  20% {
-    transform: scale(1) rotate(45deg);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(1) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-
-/* Orbital animations for Loom section */
-@keyframes orbit-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes orbit-fast {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Animation classes */
-.animate-float-sanctuary { animation: float-sanctuary 8s ease-in-out infinite; }
-.animate-shimmer-sanctuary { animation: shimmer-sanctuary 3s ease-in-out infinite; }
-.animate-pulse-sanctuary { animation: pulse-sanctuary 4s ease-in-out infinite; }
-.animate-breathe-sanctuary { animation: breathe-sanctuary 6s ease-in-out infinite; }
-.animate-drift-sanctuary { animation: drift-sanctuary 12s ease-in-out infinite; }
-
-.animate-electric-dance { animation: electric-dance 3s ease-in-out infinite; }
-.animate-lightning-whisper { animation: lightning-whisper 4s ease-in-out infinite; }
-
-.animate-mist-flow { animation: mist-flow 8s ease-in-out infinite; }
-.animate-ink-ripple { animation: ink-ripple 3s ease-out infinite; }
-.animate-rotate-clockwise { animation: rotate-clockwise 60s linear infinite; }
-.animate-rotate-counter-clockwise { animation: rotate-counter-clockwise 75s linear infinite; }
-.animate-pulse-glow-loom { animation: pulse-glow-loom 5s ease-in-out infinite; }
-
-.animate-starlight-twinkle { animation: starlight-twinkle 2s ease-in-out infinite; }
-.animate-forest-sway { animation: forest-sway 6s ease-in-out infinite; }
-
-.animate-ember-glow { animation: ember-glow 3s ease-in-out infinite; }
-.animate-molten-flow { animation: molten-flow 4s ease-in-out infinite; }
-.animate-spark-burst { animation: spark-burst 2s ease-out infinite; }
 
 /* Responsive sanctuary scaling */
 @media (max-width: 768px) {
@@ -637,21 +348,6 @@ All colors MUST be HSL.
   .glow-forge {
     box-shadow: 0 0 15px hsl(var(--element-glow) / 0.2);
   }
-  
-  /* Optimize animations for mobile */
-  .animate-electric-dance,
-  .animate-lightning-whisper,
-  .animate-mist-flow,
-  .animate-ink-ripple,
-  .animate-starlight-twinkle,
-  .animate-forest-sway,
-  .animate-ember-glow,
-  .animate-molten-flow,
-  .animate-rotate-clockwise,
-  .animate-rotate-counter-clockwise,
-  .animate-pulse-glow-loom {
-    animation-duration: 30s; /* Adjust for slower rotation on mobile */
-  }
 }
 
 /* Tablet-specific optimizations */
@@ -689,18 +385,7 @@ All colors MUST be HSL.
     margin: -0.5rem;
   }
   
-  /* Simplify animations for touch devices */
-  .animate-electric-dance,
-  .animate-lightning-whisper,
-  .animate-mist-flow,
-  .animate-ink-ripple,
-  .animate-starlight-twinkle,
-  .animate-forest-sway,
-  .animate-ember-glow,
-  .animate-molten-flow {
-    animation-duration: 4s;
-  }
-  
+
   /* Remove hover effects on touch devices */
   .hover\:scale-105:hover {
     transform: none;
@@ -709,35 +394,6 @@ All colors MUST be HSL.
 
 /* Accessibility enhancements */
 @media (prefers-reduced-motion: reduce) {
-  .animate-float-sanctuary,
-  .animate-shimmer-sanctuary,
-  .animate-pulse-sanctuary,
-  .animate-breathe-sanctuary,
-  .animate-drift-sanctuary,
-  .animate-float-sanctuary,
-  .animate-shimmer-sanctuary,
-  .animate-pulse-sanctuary,
-  .animate-breathe-sanctuary,
-  .animate-drift-sanctuary,
-  .animate-float-sanctuary,
-  .animate-shimmer-sanctuary,
-  .animate-pulse-sanctuary,
-  .animate-breathe-sanctuary,
-  .animate-drift-sanctuary,
-  .animate-electric-dance,
-  .animate-lightning-whisper,
-  .animate-mist-flow,
-  .animate-ink-ripple,
-  .animate-starlight-twinkle,
-  .animate-forest-sway,
-  .animate-ember-glow,
-  .animate-molten-flow,
-  .animate-rotate-clockwise,
-  .animate-rotate-counter-clockwise,
-  .animate-pulse-glow-loom {
-    animation: none;
-  }
-  
   .transition-sanctuary,
   .transition-whisper,
   .transition-elemental {
