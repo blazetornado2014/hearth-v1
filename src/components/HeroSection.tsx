@@ -122,12 +122,12 @@ const HeroSection = () => {
         
         {/* Mystical Headline */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-6 md:mb-8 text-foreground px-2">
-          Master your personal elements
+          Reinvent your life
         </h2>
 
         {/* Whispered Guidance */}
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-          Three gentle digital companions that guide your journey to emotional clarity and purposeful action
+          Mystical beings are waiting to guide you to the place where you belong
         </p>
 
         {/* Join Waitlist Form */}
@@ -173,7 +173,7 @@ const HeroSection = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg font-medium rounded-2xl shadow-sanctuary hover:shadow-depth transition-sanctuary hover:scale-105 glow-spark w-full sm:w-auto max-w-xs sm:max-w-none relative overflow-hidden group"
               onClick={() => navigate('/elements')}
             >
-              <span className="relative z-10">Enter Your Sanctuary</span>
+              <span className="relative z-10">Follow them!</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </Button>
           </div>

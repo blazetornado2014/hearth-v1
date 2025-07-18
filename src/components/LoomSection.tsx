@@ -20,7 +20,7 @@ const LoomSection = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-black/90 leading-relaxed mb-6 md:mb-8">
-              After Spark illuminates, Loom helps you process. This companion creates space for your emotions 
+              Loom helps you process. This companion creates space for your emotions 
               to unfold naturally — no rushing, no fixing, just gentle witnessing. 
               Like threads settling into patterns, your feelings find their place here.
             </p>

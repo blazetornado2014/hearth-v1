@@ -22,8 +22,7 @@ const ForgeSection = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-black/90 leading-relaxed mb-6 md:mb-8">
-              The final companion in your journey. Forge takes the insights from Spark, the processing from Loom, 
-              and the direction from Path — and helps you create. Not through pressure or deadlines, 
+              The final companion in your journey. Forge helps you create. Not through pressure or deadlines, 
               but through gentle, sustainable action that honors your natural rhythm.
             </p>
 

@@ -20,21 +20,21 @@ const PathSection = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-foreground leading-relaxed mb-6 md:mb-8">
-              After processing with Loom, Path offers gentle guidance. This companion doesn't push or rush — 
+              Path offers gentle guidance. This companion doesn't push or rush — 
               it simply shows you the next right step. Like ancient trails that know the way, 
               Path helps you trust your own inner compass and move forward with confidence.
             </p>
 
             <div className="space-y-2 sm:space-y-3 mb-6 md:mb-8">
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-path-emerald">
+              <div className="flex items-center gap-3 text-foreground transition-whisper">
                 <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gradient-path rounded-full animate-forest-sway glow-path"></div>
                 <span className="text-xs sm:text-sm font-medium">Gentle Guidance</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-path-starlight">
+              <div className="flex items-center gap-3 text-foreground transition-whisper">
                 <div className="w-3 h-3 bg-gradient-path rounded-full animate-starlight-twinkle glow-path" style={{animationDelay: '0.3s'}}></div>
                 <span className="text-sm font-medium">Natural Navigation</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground transition-whisper hover:text-path-emerald">
+              <div className="flex items-center gap-3 text-foreground transition-whisper">
                 <div className="w-3 h-3 bg-gradient-path rounded-full animate-forest-sway glow-path" style={{animationDelay: '0.6s'}}></div>
                 <span className="text-sm font-medium">Inner Compass</span>
               </div>
