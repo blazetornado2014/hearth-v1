@@ -54,52 +54,54 @@ const ElementsPage = () => {
   };
 
   return (
-    <div className="flex h-screen bg-sanctuary-glow text-foreground">
-      {/* Left Section - Flame SVG */}
-      <div className="w-1/2 border-r border-border p-4 flex items-center justify-center">
-        <Flame />
-      </div>
-
-      {/* Right Section - Chat Interface */}
-      <div className="w-1/2 flex flex-col">
-        {/* Chat Messages Area */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`p-3 rounded-lg max-w-[80%] ${
-                message.sender === 'user'
-                  ? 'bg-primary text-primary-foreground self-end ml-auto'
-                  : 'bg-muted self-start'
-              }`}
-            >
-              <div className="text-sm prose dark:prose-invert">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {message.text}
-                </ReactMarkdown>
-              </div>
-            </div>
-          ))}
-          {isLoading && (
-            <div className="bg-muted p-3 rounded-lg max-w-[80%] self-start">
-              <p className="text-sm">Hearth is thinking...</p>
-            </div>
-          )}
+    <div className="flex h-screen overflow-hidden bg-sanctuary-glow text-foreground">
+      <div className="flex w-full animate-fade-in">
+        {/* Left Section - Flame SVG */}
+        <div className="w-1/2 border-r border-border p-4 flex items-center justify-center">
+          <Flame />
         </div>
 
-        {/* Message Input Area */}
-        <form onSubmit={handleSendMessage} className="border-t border-border p-4 flex items-center space-x-2">
-          <Input
-            placeholder="Type your message..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            disabled={isLoading}
-            className="flex-1 h-10 rounded-lg bg-muted/50 border-border focus-visible:ring-primary"
-          />
-          <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Send
-          </Button>
-        </form>
+        {/* Right Section - Chat Interface */}
+        <div className="w-1/2 flex flex-col">
+          {/* Chat Messages Area */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`p-3 rounded-lg max-w-[80%] ${
+                  message.sender === 'user'
+                    ? 'bg-primary text-primary-foreground self-end ml-auto'
+                    : 'bg-muted self-start'
+                }`}
+              >
+                <div className="text-sm prose dark:prose-invert">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {message.text}
+                  </ReactMarkdown>
+                </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="bg-muted p-3 rounded-lg max-w-[80%] self-start">
+                <p className="text-sm">Hearth is thinking...</p>
+              </div>
+            )}
+          </div>
+
+          {/* Message Input Area */}
+          <form onSubmit={handleSendMessage} className="border-t border-border p-4 flex items-center space-x-2">
+            <Input
+              placeholder="Type your message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              disabled={isLoading}
+              className="flex-1 h-10 rounded-lg bg-muted/50 border-border focus-visible:ring-primary"
+            />
+            <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Send
+            </Button>
+          </form>
+        </div>
       </div>
     </div>
   );
