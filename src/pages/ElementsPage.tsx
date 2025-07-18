@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Flame from "@/components/Flame";
@@ -13,11 +13,16 @@ interface Message {
 }
 
 const ElementsPage = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    { text: "Hello! I am Hearth, an AI assistant. How can I help you today?", sender: 'ai' }
-  ]);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    const savedMessages = localStorage.getItem('chatMessages');
+    return savedMessages ? JSON.parse(savedMessages) : [{ text: "Hello! I am Hearth, an AI assistant. How can I help you today?", sender: 'ai' }];
+  });
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('chatMessages', JSON.stringify(messages));
+  }, [messages]);
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,14 +52,14 @@ const ElementsPage = () => {
   };
 
   return (
-    <div className="flex h-screen bg-sanctuary-glow text-foreground">
-      {/* Left Section - Flame SVG */}
-      <div className="w-1/2 border-r border-border p-4 flex items-center justify-center">
+    <div className="relative flex flex-col lg:flex-row min-h-screen bg-sanctuary-glow text-foreground">
+      {/* Left Section - Flame SVG (Background on mobile, side-by-side on large screens) */}
+      <div className="absolute inset-0 w-full h-full flex items-center justify-center opacity-50 lg:relative lg:w-1/2 lg:opacity-100 p-4 lg:self-center">
         <Flame />
       </div>
 
-      {/* Right Section - Chat Interface */}
-      <div className="w-1/2 flex flex-col">
+      {/* Right Section - Chat Interface (Foreground on mobile, side-by-side on large screens) */}
+      <div className="relative z-10 w-full lg:w-1/2 flex flex-col backdrop-blur-md bg-background/30 rounded-lg">
         {/* Chat Messages Area */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((message, index) => (
@@ -87,7 +92,7 @@ const ElementsPage = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={isLoading}
-            className="flex-1 h-10 rounded-lg bg-muted/50 border-border focus-visible:ring-primary"
+            className="flex-1 h-10 rounded-lg bg-background/50 border-border focus-visible:ring-primary"
           />
           <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground">
             Send
