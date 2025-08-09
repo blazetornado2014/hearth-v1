@@ -56,16 +56,19 @@ All colors MUST be HSL.
     --sanctuary-shadow: 240 30% 75%;
     
     /* Loom Element - Wise & Contemplative */
-    --loom-blue: 220 60% 60%; /* Muted Blue */
-    --loom-lavender: 280 50% 70%; /* Soft Lavender */
-    --loom-mist: 270 50% 45%; /* A slightly richer, but still soft purple */
-    --loom-ink: 280 60% 80%; /* A softer, more balanced pinkish-purple */
+    --loom-blue: 45 89% 60%; /* Warm Golden (#F4D03F) */
+    --loom-lavender: 45 94% 82%; /* Soft Peach (#FDEAA7) */
+    --loom-mist: 45 89% 60%; /* Warm Golden for gradient start */
+    --loom-ink: 45 94% 82%; /* Soft Peach for gradient end */
     --loom-bg: linear-gradient(to right, hsl(var(--loom-mist)) 0%, hsl(var(--loom-ink)) 100%);
-    --loom-glow: 280 90% 80%; /* Brighter purple glow */
+    --loom-glow: 45 90% 70%; /* Bright golden glow */
     
     /* Path Element - Natural & Serene */
     --path-emerald: 120 80% 35%; /* Vibrant, Natural Green */
-    --path-starlight: 0 0% 100%; /* Bright White */
+    --path-starlight: 110 20% 92%; /* Soft, off-white green */
+    --path-deep-sage: 110 15% 45%; /* For text and borders */
+    --path-earthy-brown: 35 15% 45%; /* For text and accents */
+    --path-background-fill: 110 15% 96%; /* Light, serene green background */
     --path-bg: linear-gradient(to right, hsl(var(--path-emerald)) 0%, hsl(var(--path-starlight)) 100%);
     --path-glow: 120 80% 35%; /* Vibrant Green for glow */
     

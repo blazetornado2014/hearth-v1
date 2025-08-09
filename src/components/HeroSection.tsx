@@ -127,7 +127,7 @@ const HeroSection = () => {
 
         {/* Whispered Guidance */}
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-          Three gentle digital companions that guide your journey to emotional clarity and purposeful action
+          Gentle companions that guide your journey to emotional clarity and purposeful action
         </p>
 
         {/* Join Waitlist Form */}

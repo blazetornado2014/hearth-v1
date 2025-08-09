@@ -42,8 +42,8 @@ const IntroSection = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-mist-flow"></div>
               </div>
             </div>
-            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Loom</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Emotional Processing</p>
+            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Capybara</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Happy Happy</p>
           </div>
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
@@ -53,8 +53,8 @@ const IntroSection = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-starlight-twinkle"></div>
               </div>
             </div>
-            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Path</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Gentle Guidance</p>
+            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Turtle</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Life Coach</p>
           </div>
           
           <div className="text-center group transition-elemental hover:transform hover:scale-105">
@@ -64,8 +64,8 @@ const IntroSection = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white/80 rounded-full animate-ember-glow"></div>
               </div>
             </div>
-            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Forge</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Creative Action</p>
+            <h3 className="text-sm sm:text-base font-medium text-foreground mb-2">Horse</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Goofy</p>
           </div>
         </div>
 
