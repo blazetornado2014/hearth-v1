@@ -1,4 +1,4 @@
-import loomIcon from "@/assets/loom-icon-transparent.png";
+import loomIcon from "@/assets/WhiskCapyTest.png";
 
 const LoomSection = () => {
   return (
@@ -14,35 +14,33 @@ const LoomSection = () => {
           <div className="text-left max-w-xl relative z-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-6 md:mb-8 leading-tight">
               <span className="block text-transparent bg-clip-text bg-gradient-loom font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-mist-flow pb-2">
-                Loom
+                Happy Capy
               </span>
-              <span className="block text-black">Your Emotional Weaver</span>
+              <span className="block text-black">Your Thoughtful Friend</span>
             </h2>
 
             <p className="text-base sm:text-lg text-black/90 leading-relaxed mb-6 md:mb-8">
-              After Spark illuminates, Loom helps you process. This companion creates space for your emotions 
-              to unfold naturally — no rushing, no fixing, just gentle witnessing. 
-              Like threads settling into patterns, your feelings find their place here.
+              Meet Capy, your ever so vibrant and fun-loving pet. 
             </p>
 
             <div className="space-y-2 sm:space-y-3 mb-6 md:mb-8">
               <div className="flex items-center gap-3 text-black transition-whisper hover:text-black">
                 <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-gradient-loom rounded-full animate-mist-flow glow-loom"></div>
-                <span className="text-xs sm:text-sm font-medium">Emotional Processing</span>
+                <span className="text-xs sm:text-sm font-medium">Never judges</span>
               </div>
               <div className="flex items-center gap-3 text-black transition-whisper hover:text-black">
-                <div className="w-2 h-2 bg-gradient-loom rounded-full animate-ink-ripple glow-loom" style={{animationDelay: '0.3s'}}></div>
-                <span className="text-sm font-medium">Patient Witnessing</span>
+                <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-gradient-loom rounded-full animate-ink-ripple glow-loom" style={{animationDelay: '0.3s'}}></div>
+                <span className="text-sm font-medium">Celebrates tiny victories</span>
               </div>
               <div className="flex items-center gap-3 text-black transition-whisper hover:text-black">
-                <div className="w-2 h-2 bg-gradient-loom rounded-full animate-mist-flow glow-loom" style={{animationDelay: '0.6s'}}></div>
-                <span className="text-sm font-medium">Natural Unfolding</span>
+                <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-gradient-loom rounded-full animate-mist-flow glow-loom" style={{animationDelay: '0.6s'}}></div>
+                <span className="text-sm font-medium">Reminds you to breathe</span>
               </div>
             </div>
 
             <div className="pt-6 border-t border-black/20">
               <blockquote className="text-xs sm:text-sm text-black border-none p-0 m-0 italic">
-                "Like threads in a loom, emotions weave into understanding"
+                "Sometimes happiness is about collecting oranges and chilling in a lake"
               </blockquote>
             </div>
           </div>

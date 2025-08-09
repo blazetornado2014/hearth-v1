@@ -76,7 +76,10 @@ export default {
 				/* Path element colors */
 				path: {
 					emerald: 'hsl(var(--path-emerald))',
-					starlight: 'hsl(var(--path-starlight))'
+					starlight: 'hsl(var(--path-starlight))',
+					'deep-sage': 'hsl(var(--path-deep-sage))',
+					'earthy-brown': 'hsl(var(--path-earthy-brown))',
+					'background-fill': 'hsl(var(--path-background-fill))'
 				},
 				/* Forge element colors */
 				forge: {
